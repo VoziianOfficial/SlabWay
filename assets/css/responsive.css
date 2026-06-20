@@ -1893,11 +1893,6 @@ iframe {
     }
 }
 
-/* =========================================================
-   FINAL FIX — Mobile burger menu above all content
-   Close button always visible
-   ========================================================= */
-
 @media (max-width: 980px) {
     body.is-menu-open {
         overflow: hidden !important;
