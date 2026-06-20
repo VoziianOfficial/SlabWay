@@ -677,6 +677,46 @@
         `;
     }
 
+    /* =========================================================
+   Service Insight Accordion
+   ========================================================= */
+
+    (function initServiceInsightAccordion() {
+        const accordion = document.querySelector('[data-service-insight-accordion]');
+
+        if (!accordion) {
+            return;
+        }
+
+        const items = Array.from(accordion.querySelectorAll('.service-insight__item'));
+
+        items.forEach((item) => {
+            const button = item.querySelector('.service-insight__button');
+
+            if (!button) {
+                return;
+            }
+
+            button.addEventListener('click', () => {
+                const isOpen = item.classList.contains('is-open');
+
+                items.forEach((currentItem) => {
+                    currentItem.classList.remove('is-open');
+
+                    const currentButton = currentItem.querySelector('.service-insight__button');
+                    if (currentButton) {
+                        currentButton.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                if (!isOpen) {
+                    item.classList.add('is-open');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    })();
+
     document.addEventListener('DOMContentLoaded', () => {
         renderAboutIconMarquee();
         renderTestimonials();

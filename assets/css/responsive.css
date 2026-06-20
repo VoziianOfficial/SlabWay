@@ -1981,3 +1981,399 @@ iframe {
         padding: 12px 14px 9px !important;
     }
 }
+
+/* =========================================================
+   HARD RESET — Service Insight responsive without conflicts
+   Put this at the very bottom of assets/css/responsive.css
+   ========================================================= */
+
+/* ---------- DESKTOP / BASE CLEANUP ---------- */
+
+.service-insight {
+    overflow: hidden !important;
+}
+
+.service-insight>.container {
+    width: min(100% - 36px, 1480px) !important;
+    max-width: 1480px !important;
+}
+
+.service-insight__grid {
+    display: grid !important;
+    grid-template-columns:
+        minmax(360px, 1.02fr) minmax(340px, 0.9fr) minmax(360px, 0.98fr) !important;
+    grid-template-areas: "intro media accordion" !important;
+    gap: clamp(28px, 3.6vw, 58px) !important;
+    align-items: center !important;
+}
+
+.service-insight__grid>* {
+    min-width: 0 !important;
+}
+
+.service-insight__intro {
+    grid-area: intro !important;
+    max-width: 640px !important;
+}
+
+.service-insight__media {
+    grid-area: media !important;
+    position: relative !important;
+    min-height: 500px !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.service-insight__photo {
+    width: 100% !important;
+    height: 500px !important;
+    border-radius: 28px !important;
+}
+
+.service-insight__frame {
+    inset: 24px -18px -18px 24px !important;
+    border-radius: 28px !important;
+}
+
+.service-insight__accordion {
+    grid-area: accordion !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: none !important;
+    justify-self: stretch !important;
+}
+
+.service-insight__item {
+    width: 100% !important;
+}
+
+.service-insight__button {
+    padding: 18px 18px !important;
+}
+
+.service-insight__panel-content p {
+    padding: 0 18px 16px !important;
+    font-size: 0.88rem !important;
+    line-height: 1.52 !important;
+}
+
+/* ---------- TABLET: intro / wide photo / 2x2 accordion ---------- */
+
+@media (min-width: 761px) and (max-width: 1080px) {
+    .service-insight {
+        padding: 72px 0 !important;
+    }
+
+    .service-insight>.container {
+        width: min(100% - 40px, 940px) !important;
+        max-width: 940px !important;
+    }
+
+    .service-insight__grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-areas:
+            "intro"
+            "media"
+            "accordion" !important;
+        gap: 30px !important;
+        align-items: start !important;
+    }
+
+    .service-insight__intro {
+        grid-area: intro !important;
+        max-width: 860px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .service-insight__intro .section-kicker {
+        justify-content: center !important;
+    }
+
+    .service-insight__intro h2 {
+        max-width: 840px !important;
+        margin-inline: auto !important;
+        font-size: clamp(2.35rem, 6vw, 4.25rem) !important;
+        line-height: 1 !important;
+        letter-spacing: -0.058em !important;
+    }
+
+    .service-insight__intro p:not(.section-kicker) {
+        max-width: 740px !important;
+        margin-inline: auto !important;
+        font-size: 0.98rem !important;
+        line-height: 1.66 !important;
+    }
+
+    .service-insight__intro .btn {
+        margin-inline: auto !important;
+    }
+
+    .service-insight__media {
+        grid-area: media !important;
+        width: 100% !important;
+        min-height: 0 !important;
+        max-width: none !important;
+    }
+
+    .service-insight__photo {
+        width: 100% !important;
+        height: 390px !important;
+        border-radius: 28px !important;
+    }
+
+    .service-insight__frame {
+        inset: 20px -14px -14px 20px !important;
+        border-radius: 28px !important;
+    }
+
+    .service-insight__accordion {
+        grid-area: accordion !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    .service-insight__item {
+        width: 100% !important;
+        min-height: 0 !important;
+        border-radius: 20px !important;
+    }
+
+    .service-insight__button {
+        min-height: 72px !important;
+        padding: 18px 18px !important;
+    }
+
+    .service-insight__button-title {
+        font-size: 1.02rem !important;
+        line-height: 1.08 !important;
+    }
+
+    .service-insight__panel-content p {
+        padding: 0 18px 17px !important;
+        font-size: 0.86rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+/* ---------- MOBILE: simple vertical layout ---------- */
+
+@media (max-width: 760px) {
+    .service-insight {
+        padding: 54px 0 !important;
+    }
+
+    .service-insight>.container {
+        width: min(100% - 28px, 640px) !important;
+        max-width: min(100% - 28px, 640px) !important;
+    }
+
+    .service-insight__grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-areas:
+            "intro"
+            "media"
+            "accordion" !important;
+        gap: 22px !important;
+        align-items: start !important;
+    }
+
+    .service-insight__intro {
+        grid-area: intro !important;
+        max-width: 100% !important;
+        text-align: left !important;
+    }
+
+    .service-insight__intro .section-kicker {
+        justify-content: flex-start !important;
+    }
+
+    .service-insight__intro h2 {
+        max-width: 100% !important;
+        font-size: clamp(2rem, 10vw, 3.1rem) !important;
+        line-height: 1 !important;
+        letter-spacing: -0.058em !important;
+    }
+
+    .service-insight__intro p:not(.section-kicker) {
+        max-width: 100% !important;
+        margin-top: 16px !important;
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .service-insight__intro .btn {
+        width: fit-content !important;
+        margin-top: 20px !important;
+    }
+
+    .service-insight__media {
+        grid-area: media !important;
+        width: 100% !important;
+        min-height: 0 !important;
+        max-width: none !important;
+    }
+
+    .service-insight__photo {
+        width: 100% !important;
+        height: 270px !important;
+        border-radius: 22px !important;
+    }
+
+    .service-insight__frame {
+        inset: 14px -8px -8px 14px !important;
+        border-radius: 22px !important;
+    }
+
+    .service-insight__accordion {
+        grid-area: accordion !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .service-insight__item {
+        width: 100% !important;
+        border-radius: 18px !important;
+        box-shadow: none !important;
+    }
+
+    .service-insight__button {
+        min-height: 64px !important;
+        padding: 16px 15px !important;
+    }
+
+    .service-insight__button-title {
+        font-size: 0.98rem !important;
+        line-height: 1.08 !important;
+    }
+
+    .service-insight__icon {
+        width: 26px !important;
+        height: 26px !important;
+    }
+
+    .service-insight__icon svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    .service-insight__panel-content p {
+        padding: 0 15px 15px !important;
+        font-size: 0.82rem !important;
+        line-height: 1.48 !important;
+    }
+}
+
+/* =========================================================
+   HARD FIX — Service Insight image centered on tablet/mobile
+   Prevent photo/frame from leaving container
+   ========================================================= */
+
+@media (max-width: 1080px) {
+    .service-insight {
+        overflow: hidden !important;
+    }
+
+    .service-insight>.container {
+        width: min(100% - 36px, 940px) !important;
+        max-width: min(100% - 36px, 940px) !important;
+        overflow: visible !important;
+    }
+
+    .service-insight__grid {
+        justify-items: center !important;
+        overflow: visible !important;
+    }
+
+    .service-insight__media {
+        grid-area: media !important;
+        width: min(100%, 780px) !important;
+        max-width: 100% !important;
+        min-height: 0 !important;
+        margin-inline: auto !important;
+        justify-self: center !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+    }
+
+    .service-insight__photo {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 390px !important;
+        margin-inline: auto !important;
+        border-radius: 28px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    .service-insight__photo img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* рамку больше не выпускаем за контейнер */
+    .service-insight__frame {
+        inset: 18px 18px -12px 18px !important;
+        max-width: calc(100% - 36px) !important;
+        margin-inline: auto !important;
+        border-radius: 28px !important;
+        box-sizing: border-box !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-insight>.container {
+        width: min(100% - 28px, 640px) !important;
+        max-width: min(100% - 28px, 640px) !important;
+    }
+
+    .service-insight__media {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        justify-self: center !important;
+    }
+
+    .service-insight__photo {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 280px !important;
+        border-radius: 22px !important;
+    }
+
+    .service-insight__frame {
+        inset: 12px 12px -8px 12px !important;
+        max-width: calc(100% - 24px) !important;
+        border-radius: 22px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .service-insight__photo {
+        height: 250px !important;
+    }
+
+    .service-insight__frame {
+        inset: 10px 10px -7px 10px !important;
+        max-width: calc(100% - 20px) !important;
+    }
+}
+
+/* Hide Service Insight accordion on all tablet widths */
+@media (min-width: 761px) and (max-width: 1180px) {
+    .service-insight__accordion {
+        display: none !important;
+    }
+}
