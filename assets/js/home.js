@@ -140,10 +140,6 @@
                 label: 'About'
             },
             {
-                id: 'quality',
-                label: 'Quality'
-            },
-            {
                 id: 'popular',
                 label: 'Popular'
             },
@@ -167,76 +163,6 @@
             </nav>
         `;
     }
-
-    /* =========================================================
-   Home Quality Animated Progress Lines
-   Fill by data-percent value
-   ========================================================= */
-
-    (function () {
-        'use strict';
-
-        function animateNumber(element, target) {
-            if (!element) return;
-
-            let start = 0;
-            const duration = 1200;
-            const startTime = performance.now();
-
-            function update(currentTime) {
-                const progress = Math.min((currentTime - startTime) / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                const currentValue = Math.round(start + (target - start) * eased);
-
-                element.textContent = `${currentValue}%`;
-
-                if (progress < 1) {
-                    requestAnimationFrame(update);
-                }
-            }
-
-            requestAnimationFrame(update);
-        }
-
-        function initQualityLines() {
-            const lines = document.querySelectorAll('[data-quality-line]');
-
-            if (!lines.length) {
-                return;
-            }
-
-            const activateLine = (line) => {
-                const percent = Number(line.dataset.percent || 0);
-                const safePercent = Math.max(0, Math.min(percent, 100));
-                const number = line.querySelector('strong');
-
-                line.style.setProperty('--quality-width', `${safePercent}%`);
-                line.classList.add('is-visible');
-
-                animateNumber(number, safePercent);
-            };
-
-            if (!('IntersectionObserver' in window)) {
-                lines.forEach(activateLine);
-                return;
-            }
-
-            const observer = new IntersectionObserver((entries, currentObserver) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) return;
-
-                    activateLine(entry.target);
-                    currentObserver.unobserve(entry.target);
-                });
-            }, {
-                threshold: 0.35
-            });
-
-            lines.forEach((line) => observer.observe(line));
-        }
-
-        document.addEventListener('DOMContentLoaded', initQualityLines);
-    })();
 
     function refreshPage() {
         if (window.lucide) {
