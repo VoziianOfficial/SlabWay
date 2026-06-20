@@ -1138,7 +1138,7 @@
     grid-template-columns: 1fr !important;
     gap: 34px !important;
     align-items: start !important;
-    margin-top: clamp(58px, 7vw, 88px) !important;
+    margin-top: clamp(58px, 7vw, 8px) !important;
 }
 
 /* фото делаем шире и горизонтальным */

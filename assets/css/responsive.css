@@ -2451,3 +2451,22 @@ iframe {
         height: 280px !important;
     }
 }
+
+/* Service Benefits Quote — slightly lower photo height */
+.service-benefits-quote__photo {
+    height: clamp(310px, 28vw, 430px) !important;
+}
+
+/* Tablet */
+@media (max-width: 1080px) {
+    .service-benefits-quote__photo {
+        height: 340px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .service-benefits-quote__photo {
+        height: 240px !important;
+    }
+}
