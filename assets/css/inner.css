@@ -2595,3 +2595,225 @@
         font-size: 0.82rem;
     }
 }
+
+
+/* =========================================================
+   FINAL FIX — Contact intro mobile/tablet
+   Put this at the very bottom of responsive.css
+   ========================================================= */
+
+@media (max-width: 760px) {
+    .contact-intro.section {
+        padding: 50px 0 54px !important;
+        overflow: hidden;
+    }
+
+    .contact-intro .container {
+        width: min(100% - 28px, 640px) !important;
+        max-width: min(100% - 28px, 640px) !important;
+    }
+
+    .contact-intro__grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        align-items: start !important;
+    }
+
+    .contact-intro__content {
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .contact-intro__content .section-kicker {
+        justify-content: center !important;
+    }
+
+    .contact-intro__content h2 {
+        max-width: 580px !important;
+        margin-inline: auto !important;
+        font-size: clamp(1.95rem, 9vw, 3rem) !important;
+        line-height: 1.02 !important;
+        letter-spacing: -0.055em !important;
+        text-wrap: balance;
+    }
+
+    .contact-intro__content p:not(.section-kicker) {
+        max-width: 560px !important;
+        margin: 14px auto 0 !important;
+        font-size: 0.92rem !important;
+        line-height: 1.58 !important;
+    }
+
+    .contact-intro__items,
+    .contact-intro [data-contact-intro-items] {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .contact-intro-item {
+        position: relative !important;
+        min-height: 0 !important;
+        display: grid !important;
+        grid-template-columns: 34px 1fr !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 13px 12px !important;
+        border: 1px solid rgba(36, 35, 31, 0.12) !important;
+        border-radius: 16px !important;
+        background: rgba(255, 255, 255, 0.24) !important;
+        overflow: hidden !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    .contact-intro-item::after {
+        content: "" !important;
+        position: absolute !important;
+        left: 58px !important;
+        right: 12px !important;
+        bottom: 7px !important;
+        width: auto !important;
+        height: 2px !important;
+        border-radius: var(--radius-pill) !important;
+        background: var(--gold) !important;
+        transform: scaleX(0) !important;
+        transform-origin: left !important;
+        transition: transform var(--transition-main) !important;
+    }
+
+    .contact-intro-item:hover::after {
+        transform: scaleX(1) !important;
+    }
+
+    .contact-intro-item__icon {
+        margin: 0 !important;
+        width: 34px !important;
+        height: 34px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: var(--old-brass) !important;
+    }
+
+    .contact-intro-item__icon svg {
+        width: 27px !important;
+        height: 27px !important;
+        stroke-width: 1.55 !important;
+    }
+
+    .contact-intro-item h3 {
+        margin: 0 !important;
+        color: var(--deep-black) !important;
+        font-size: 0.96rem !important;
+        line-height: 1.08 !important;
+        letter-spacing: -0.04em !important;
+    }
+
+    .contact-intro-item p {
+        margin: 4px 0 0 !important;
+        color: rgba(36, 35, 31, 0.62) !important;
+        font-size: 0.76rem !important;
+        line-height: 1.34 !important;
+
+        display: -webkit-box !important;
+        -webkit-line-clamp: 1 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
+}
+
+@media (min-width: 521px) and (max-width: 760px) {
+
+    .contact-intro__items,
+    .contact-intro [data-contact-intro-items] {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+    }
+
+    .contact-intro-item {
+        grid-template-columns: 32px 1fr !important;
+        padding: 14px 12px !important;
+    }
+
+    .contact-intro-item::after {
+        left: 56px !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .contact-intro .container {
+        width: calc(100% - 24px) !important;
+        max-width: calc(100% - 24px) !important;
+    }
+
+    .contact-intro-item {
+        grid-template-columns: 30px 1fr !important;
+        gap: 10px !important;
+        padding: 12px 10px !important;
+    }
+
+    .contact-intro-item__icon {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .contact-intro-item__icon svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .contact-intro-item::after {
+        left: 50px !important;
+        right: 10px !important;
+    }
+}
+
+/* =========================================================
+   FIX — Contact intro text visibility
+   Text must stay in the second column
+   ========================================================= */
+
+@media (max-width: 760px) {
+    .contact-intro-item__icon {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        align-self: start;
+        margin-top: 2px !important;
+    }
+
+    .contact-intro-item h3 {
+        grid-column: 2;
+        grid-row: 1;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: var(--deep-black) !important;
+    }
+
+    .contact-intro-item p {
+        grid-column: 2;
+        grid-row: 2;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        margin-top: 5px !important;
+        color: rgba(36, 35, 31, 0.72) !important;
+        font-size: 0.78rem !important;
+        line-height: 1.38 !important;
+        overflow: visible !important;
+
+        -webkit-line-clamp: unset !important;
+        -webkit-box-orient: unset !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .contact-intro-item p {
+        font-size: 0.76rem !important;
+        line-height: 1.35 !important;
+    }
+}
