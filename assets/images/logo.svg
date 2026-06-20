@@ -1,0 +1,85 @@
+<svg width="820" height="640" viewBox="0 0 820 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="slabwayLogoTitle slabwayLogoDesc">
+    <title id="slabwayLogoTitle">SlabWay concrete logo</title>
+    <desc id="slabwayLogoDesc">A premium concrete slab mark with rounded black outline, light cement fill, darker panels, and diagonal hatch texture.</desc>
+
+    <defs>
+        <clipPath id="slabwayClip">
+            <path d="M145 369 C126 369 121 364 121 348 L121 323 C121 309 127 303 141 303 L152 303 C162 303 168 296 168 286 L171 197 C172 180 164 171 147 171 L134 171 C124 171 121 166 121 157 L121 129 C121 122 123 116 127 110 L194 2 C208 -19 222 -27 248 -27 L572 -27 C599 -27 614 -18 628 5 L694 114 C698 121 700 128 701 136 L701 158 C701 168 697 173 687 173 L674 173 C657 173 649 183 650 200 L653 286 C654 297 660 303 671 303 L683 303 C697 303 702 309 702 323 L702 349 C702 364 696 369 681 369 Z"/>
+        </clipPath>
+
+        <pattern id="slabwayHatch" width="34" height="34" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
+            <line x1="0" y1="0" x2="0" y2="34" stroke="#FFFFFF" stroke-width="3" opacity="0.42"/>
+            <line x1="12" y1="0" x2="12" y2="34" stroke="#FFFFFF" stroke-width="1.6" opacity="0.22"/>
+        </pattern>
+
+        <pattern id="slabwayFineHatch" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
+            <line x1="0" y1="0" x2="0" y2="48" stroke="#FFFFFF" stroke-width="2" opacity="0.28"/>
+            <line x1="18" y1="0" x2="18" y2="48" stroke="#FFFFFF" stroke-width="1.2" opacity="0.16"/>
+            <line x1="36" y1="0" x2="36" y2="48" stroke="#FFFFFF" stroke-width="1.2" opacity="0.18"/>
+        </pattern>
+
+        <filter id="slabwaySoftShadow" x="70" y="80" width="680" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000000" flood-opacity="0.22"/>
+        </filter>
+    </defs>
+
+    <rect width="820" height="640" fill="none"/>
+
+    <g transform="translate(0 130)" filter="url(#slabwaySoftShadow)">
+        <path d="M145 369 C126 369 121 364 121 348 L121 323 C121 309 127 303 141 303 L152 303 C162 303 168 296 168 286 L171 197 C172 180 164 171 147 171 L134 171 C124 171 121 166 121 157 L121 129 C121 122 123 116 127 110 L194 2 C208 -19 222 -27 248 -27 L572 -27 C599 -27 614 -18 628 5 L694 114 C698 121 700 128 701 136 L701 158 C701 168 697 173 687 173 L674 173 C657 173 649 183 650 200 L653 286 C654 297 660 303 671 303 L683 303 C697 303 702 309 702 323 L702 349 C702 364 696 369 681 369 Z"
+            fill="#E3E4E2"
+            stroke="#222222"
+            stroke-width="12"
+            stroke-linejoin="round"/>
+
+        <g clip-path="url(#slabwayClip)">
+            <rect x="110" y="-38" width="605" height="420" fill="url(#slabwayFineHatch)" opacity="0.9"/>
+
+            <path d="M190 -21H594L674 119H143L209 -2C217 -15 227 -21 244 -21Z"
+                fill="#C8C9C7"
+                opacity="0.95"/>
+
+            <rect x="121" y="124" width="580" height="53" fill="#F1F2F0" opacity="0.72"/>
+            <rect x="121" y="309" width="581" height="55" fill="#F6F6F3" opacity="0.48"/>
+
+            <rect x="110" y="-38" width="605" height="420" fill="url(#slabwayHatch)" opacity="0.8"/>
+
+            <path d="M184 52 C225 36 270 29 322 37" stroke="#9B9D9A" stroke-width="5" stroke-linecap="round" opacity="0.34"/>
+            <path d="M489 42 C537 31 587 39 632 62" stroke="#9B9D9A" stroke-width="5" stroke-linecap="round" opacity="0.28"/>
+            <path d="M252 255 C291 244 337 250 368 271" stroke="#9B9D9A" stroke-width="4" stroke-linecap="round" opacity="0.24"/>
+            <path d="M454 256 C496 240 543 245 586 269" stroke="#9B9D9A" stroke-width="4" stroke-linecap="round" opacity="0.24"/>
+        </g>
+
+        <path d="M135 124H687" stroke="#222222" stroke-width="8" stroke-linecap="round"/>
+
+        <path d="M202 317 L202 198 C202 184 210 177 224 177 L370 177 C384 177 392 185 392 199 L392 317 Z"
+            fill="#D3D4D2"
+            stroke="#222222"
+            stroke-width="12"
+            stroke-linejoin="round"/>
+
+        <path d="M246 183L210 312H261L297 183H246Z"
+            fill="#B5B6B4"
+            opacity="0.95"/>
+
+        <path d="M432 317 L432 198 C432 184 440 177 454 177 L599 177 C613 177 621 185 621 199 L621 317 Z"
+            fill="#D3D4D2"
+            stroke="#222222"
+            stroke-width="12"
+            stroke-linejoin="round"/>
+
+        <path d="M574 183L611 312H560L523 183H574Z"
+            fill="#B5B6B4"
+            opacity="0.95"/>
+
+        <g clip-path="url(#slabwayClip)">
+            <rect x="194" y="171" width="205" height="152" fill="url(#slabwayFineHatch)" opacity="0.45"/>
+            <rect x="425" y="171" width="203" height="152" fill="url(#slabwayFineHatch)" opacity="0.45"/>
+        </g>
+
+        <path d="M136 365H686" stroke="#222222" stroke-width="8" stroke-linecap="round"/>
+
+        <path d="M174 148H648" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+        <path d="M158 342H664" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.26"/>
+    </g>
+</svg>
