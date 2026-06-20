@@ -17,6 +17,23 @@ window.SLABWAY_CONFIG = {
         formEndpoint: 'contact.php'
     },
 
+    contact: {
+        phoneRaw: '+18885550152',
+        phoneDisplay: '(888) 555-0152',
+        email: 'hello@slabway.com',
+        supportHours: 'Mon–Fri, 8:00 AM–7:00 PM',
+        formEndpoint: 'contact.php'
+    },
+
+    defaults: {
+        companyName: 'SlabWay',
+        companyId: 'SLABWAY-CONCRETE-2048',
+        email: 'hello@slabway.com',
+        phoneRaw: '+18885550152',
+        phoneDisplay: '(888) 555-0152',
+        address: 'USA Service Area'
+    },
+
     brand: {
         name: 'SlabWay',
         accentWord: 'Way',

@@ -104,25 +104,34 @@
 
     function getBrandMarkup() {
         const logoPath = config.brand?.logoPath || config.images?.logo || 'assets/images/logo.svg';
-        const name = config.brand?.name || config.company?.name || 'SlabWay';
-        const accentWord = config.brand?.accentWord || 'Way';
+
+        /*
+           Single source of truth:
+           Change company.name in config.js and the logo text changes everywhere.
+        */
+        const name = config.company?.name || config.brand?.name || 'SlabWay';
+        const accentWord = config.brand?.accentWord || '';
 
         const escapedName = escapeHtml(name);
         const escapedAccent = escapeHtml(accentWord);
-        const baseWord = escapedName.endsWith(escapedAccent)
-            ? escapedName.slice(0, escapedName.length - escapedAccent.length)
-            : escapedName;
+
+        let brandText = escapedName;
+
+        if (accentWord && escapedName.endsWith(escapedAccent)) {
+            const baseWord = escapedName.slice(0, escapedName.length - escapedAccent.length);
+            brandText = `${baseWord}<span class="site-brand__accent">${escapedAccent}</span>`;
+        }
 
         return `
-            <a class="site-brand" href="index.html" aria-label="${escapedName} home">
-                <span class="site-brand__mark" aria-hidden="true">
-                    <img src="${escapeHtml(logoPath)}" alt="" width="82" height="64">
-                </span>
-                <span class="site-brand__text">
-                    ${escapeHtml(baseWord)}<span class="site-brand__accent">${escapedAccent}</span>
-                </span>
-            </a>
-        `;
+        <a class="site-brand" href="index.html" aria-label="${escapedName} home">
+            <span class="site-brand__mark" aria-hidden="true">
+                <img src="${escapeHtml(logoPath)}" alt="" width="82" height="64">
+            </span>
+            <span class="site-brand__text">
+                ${brandText}
+            </span>
+        </a>
+    `;
     }
 
     function getMainNavMarkup() {
@@ -507,6 +516,157 @@
         });
     }
 
+    function syncSiteIdentity() {
+        const defaults = config.defaults || {};
+
+        const current = {
+            companyName: config.company?.name || '',
+            companyId: config.company?.companyId || '',
+            email: config.contact?.email || '',
+            phoneRaw: config.contact?.phoneRaw || '',
+            phoneDisplay: config.contact?.phoneDisplay || '',
+            address: config.company?.address || '',
+            mapQuery: config.company?.mapQuery || config.company?.address || '',
+            formEndpoint: config.contact?.formEndpoint || 'contact.php'
+        };
+
+        const replacements = [
+            [defaults.companyName || 'SlabWay', current.companyName],
+            [defaults.companyId || 'SLABWAY-CONCRETE-2048', current.companyId],
+            [defaults.email || 'hello@slabway.com', current.email],
+            [defaults.phoneRaw || '+18885550152', current.phoneRaw],
+            [defaults.phoneDisplay || '(888) 555-0152', current.phoneDisplay],
+            [defaults.address || 'USA Service Area', current.address]
+        ].filter(([from, to]) => from && to && from !== to);
+
+        function replaceValue(value) {
+            let nextValue = safeText(value);
+
+            replacements.forEach(([from, to]) => {
+                nextValue = nextValue.split(from).join(to);
+            });
+
+            return nextValue;
+        }
+
+       
+        function replaceTextNodes(root) {
+            if (!root) {
+                return;
+            }
+
+            const blockedTags = new Set([
+                'SCRIPT',
+                'STYLE',
+                'NOSCRIPT',
+                'TEXTAREA',
+                'INPUT',
+                'SELECT',
+                'OPTION',
+                'SVG',
+                'PATH'
+            ]);
+
+            const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+                acceptNode(node) {
+                    const parent = node.parentElement;
+
+                    if (!parent || blockedTags.has(parent.tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    if (!node.nodeValue || !node.nodeValue.trim()) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            });
+
+            const nodes = [];
+
+            while (walker.nextNode()) {
+                nodes.push(walker.currentNode);
+            }
+
+            nodes.forEach((node) => {
+                node.nodeValue = replaceValue(node.nodeValue);
+            });
+        }
+
+        function replaceAttributes(root) {
+            if (!root) {
+                return;
+            }
+
+            const attributes = [
+                'title',
+                'aria-label',
+                'alt',
+                'placeholder',
+                'value',
+                'content'
+            ];
+
+            root.querySelectorAll('*').forEach((element) => {
+                attributes.forEach((attr) => {
+                    if (element.hasAttribute(attr)) {
+                        element.setAttribute(attr, replaceValue(element.getAttribute(attr)));
+                    }
+                });
+            });
+        }
+
+    
+        injectConfigValues();
+
+      
+        replaceTextNodes(document.body);
+        replaceAttributes(document);
+
+       
+        document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+            link.setAttribute('href', normalizeUrl(current.email, 'email'));
+
+            if (link.textContent.trim() === defaults.email) {
+                link.textContent = current.email;
+            }
+        });
+
+      
+        document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+            link.setAttribute('href', normalizeUrl(current.phoneRaw, 'phone'));
+
+            if (
+                link.textContent.trim() === defaults.phoneDisplay ||
+                link.textContent.trim() === defaults.phoneRaw
+            ) {
+                link.textContent = current.phoneDisplay;
+            }
+        });
+
+     
+        document.querySelectorAll('a[href*="google.com/maps"], a[data-config-href-type="map"]').forEach((link) => {
+            link.setAttribute('href', normalizeUrl(current.mapQuery, 'map'));
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+
+    
+        document.querySelectorAll('form[data-contact-form], form[action="contact.php"]').forEach((form) => {
+            form.setAttribute('action', current.formEndpoint);
+        });
+
+
+        document.title = replaceValue(document.title);
+
+        document.querySelectorAll('meta[name="description"], meta[property="og:title"], meta[property="og:description"]').forEach((meta) => {
+            if (meta.hasAttribute('content')) {
+                meta.setAttribute('content', replaceValue(meta.getAttribute('content')));
+            }
+        });
+    }
+
     function initHeaderScroll() {
         const header = document.querySelector('[data-header]');
 
@@ -763,6 +923,7 @@
         renderCookieBanner();
 
         injectConfigValues();
+        syncSiteIdentity();
 
         initHeaderScroll();
         initMobileMenu();
@@ -773,5 +934,9 @@
         initLibraries();
 
         refreshIconsAndAos();
+
+    
+        window.setTimeout(syncSiteIdentity, 0);
+        window.setTimeout(syncSiteIdentity, 250);
     });
 })();
