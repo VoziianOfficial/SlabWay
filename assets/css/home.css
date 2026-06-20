@@ -963,3 +963,43 @@
     }
 }
 
+/* =========================================================
+   Home intro cards full width
+   Remove side container gaps
+   ========================================================= */
+
+.home-intro-cards {
+    width: 100%;
+    margin-inline: 0;
+}
+
+.home-intro-cards>.container-wide {
+    width: 100%;
+    max-width: none;
+    padding-inline: 0;
+    margin-inline: 0;
+}
+
+.home-intro-cards__grid {
+    width: 100%;
+    border-radius: 0;
+}
+
+/* чтобы карточки красиво занимали всю ширину без боковых пустот */
+.home-intro-card {
+    border-radius: 0;
+}
+
+/* Tablet / Mobile */
+@media (max-width: 760px) {
+    .home-intro-cards__grid {
+        margin-inline: 0;
+        padding-inline: 0;
+        border-radius: 0;
+    }
+
+    .home-intro-card {
+        min-width: 245px;
+        border-radius: 0;
+    }
+}

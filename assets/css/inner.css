@@ -1393,3 +1393,116 @@
     }
 }
 
+/* =========================================================
+   Fix About Testimonials Swiper overflow
+   ========================================================= */
+
+.about-testimonials {
+    overflow: hidden;
+}
+
+.about-testimonials .container {
+    max-width: min(var(--container), calc(100% - 40px));
+}
+
+.about-testimonials__grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.about-testimonials__grid>* {
+    min-width: 0;
+}
+
+.about-testimonials__intro {
+    min-width: 0;
+}
+
+.about-testimonials__intro h2 {
+    max-width: 640px;
+}
+
+.about-testimonials__intro p {
+    max-width: 620px;
+}
+
+.about-testimonials [data-testimonials-swiper] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.testimonial-swiper-wrap {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.testimonial-swiper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.testimonial-swiper .swiper-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
+.testimonial-swiper .swiper-slide {
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.testimonial-card {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* убираем риск горизонтального вылета из-за AOS fade-left */
+.testimonial-swiper-wrap[data-aos="fade-left"] {
+    transform-origin: center;
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+    .about-testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-testimonials__intro {
+        max-width: 760px;
+    }
+
+    .about-testimonials__intro h2,
+    .about-testimonials__intro p {
+        max-width: 760px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+    .about-testimonials .container {
+        width: calc(100% - 28px);
+        max-width: calc(100% - 28px);
+    }
+
+    .testimonial-swiper-wrap {
+        overflow: hidden;
+    }
+
+    .testimonial-card {
+        min-height: 300px;
+    }
+
+    .swiper-controls {
+        width: 100%;
+        max-width: 100%;
+    }
+}
