@@ -2377,3 +2377,77 @@ iframe {
         display: none !important;
     }
 }
+
+/* =========================================================
+   FIX — Service Benefits top width same as photo
+   Equal side offsets for top block and photo
+   ========================================================= */
+
+.service-benefits-quote__top,
+.service-benefits-quote__photo,
+.service-benefits-quote__statement {
+    width: 100% !important;
+    max-width: 1320px !important;
+    margin-inline: auto !important;
+    box-sizing: border-box !important;
+}
+
+/* верхний блок теперь не растягивается шире фото */
+.service-benefits-quote__top {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr) !important;
+    gap: clamp(42px, 5vw, 78px) !important;
+}
+
+/* заголовку даём больше места внутри этой одинаковой ширины */
+.service-benefits-quote__title {
+    max-width: 720px !important;
+}
+
+.service-benefits-quote__title h2,
+#service-benefits-quote-title {
+    max-width: 720px !important;
+}
+
+/* фото остаётся горизонтальным и такой же ширины */
+.service-benefits-quote__photo {
+    display: block !important;
+    height: clamp(360px, 34vw, 520px) !important;
+}
+
+/* Tablet */
+@media (max-width: 1080px) {
+
+    .service-benefits-quote__top,
+    .service-benefits-quote__photo,
+    .service-benefits-quote__statement {
+        max-width: 100% !important;
+    }
+
+    .service-benefits-quote__top {
+        grid-template-columns: 1fr !important;
+        gap: 34px !important;
+    }
+
+    .service-benefits-quote__title,
+    .service-benefits-quote__title h2,
+    #service-benefits-quote-title {
+        max-width: 880px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .service-benefits-quote__top {
+        gap: 28px !important;
+    }
+
+    .service-benefits-quote__title,
+    .service-benefits-quote__title h2,
+    #service-benefits-quote-title {
+        max-width: 100% !important;
+    }
+
+    .service-benefits-quote__photo {
+        height: 280px !important;
+    }
+}
