@@ -1,16 +1,6 @@
-/* =========================================================
-   SlabWay — Inner Pages Styles
-   File: assets/css/inner.css
 
-   Used for:
-   about.html
-   all-services.html
-   contact.html
-   ========================================================= */
 
-/* =========================================================
-   Shared Inner Layout Helpers
-   ========================================================= */
+
 
 .inner-section-head {
     max-width: 780px;
@@ -102,9 +92,7 @@
     color: var(--gold);
 }
 
-/* =========================================================
-   About Page — Icon Marquee
-   ========================================================= */
+
 
 .about-marquee {
     padding: 0;
@@ -115,9 +103,7 @@
     padding: 44px 0;
 }
 
-/* =========================================================
-   About Page — Testimonials Swiper
-   ========================================================= */
+
 
 .about-testimonials {
     background: var(--cement-light);
@@ -312,9 +298,7 @@
     background: var(--gold);
 }
 
-/* =========================================================
-   About Page — About SlabWay Split
-   ========================================================= */
+
 
 .about-platform {
     background: var(--cement-soft);
@@ -383,9 +367,7 @@
     margin-top: 30px;
 }
 
-/* =========================================================
-   About Page — Horizontal FAQ With Watermark
-   ========================================================= */
+
 
 .inner-faq {
     position: relative;
@@ -421,9 +403,7 @@
     line-height: 1.78;
 }
 
-/* =========================================================
-   All Services Page — Black Icon Strip
-   ========================================================= */
+
 
 .all-icons {
     padding: 0;
@@ -492,9 +472,7 @@
     transform: scaleX(1);
 }
 
-/* =========================================================
-   All Services Page — About + Stats
-   ========================================================= */
+
 
 .services-about {
     background: var(--cement-light);
@@ -626,9 +604,7 @@
     line-height: 1.35;
 }
 
-/* =========================================================
-   All Services Page — Interactive Services Swiper
-   ========================================================= */
+
 
 .services-showcase {
     color: var(--light-text);
@@ -799,9 +775,7 @@
     }
 }
 
-/* =========================================================
-   All Services Page — Three Steps
-   ========================================================= */
+
 
 .services-steps {
     background: var(--cement-soft);
@@ -911,9 +885,7 @@
     color: rgba(244, 238, 220, 0.7);
 }
 
-/* =========================================================
-   Contact Page — Intro
-   ========================================================= */
+
 
 .contact-intro {
     background: var(--cement-light);
@@ -994,9 +966,7 @@
     font-size: 0.96rem;
 }
 
-/* =========================================================
-   Contact Page — Form Section
-   ========================================================= */
+
 
 .contact-form-section {
     color: var(--light-text);
@@ -1098,9 +1068,7 @@
     width: fit-content;
 }
 
-/* =========================================================
-   Contact Page — Photo + Text
-   ========================================================= */
+
 
 .contact-details {
     background: var(--cement-soft);
@@ -1126,9 +1094,7 @@
     line-height: 1.78;
 }
 
-/* =========================================================
-   Contact / Legal Config Card
-   ========================================================= */
+
 
 .config-contact-card {
     display: grid;
@@ -1156,9 +1122,7 @@
     color: var(--old-brass);
 }
 
-/* =========================================================
-   Responsive — Inner Pages
-   ========================================================= */
+
 
 @media (max-width: 1120px) {
 
@@ -1393,9 +1357,7 @@
     }
 }
 
-/* =========================================================
-   Fix About Testimonials Swiper overflow
-   ========================================================= */
+
 
 .about-testimonials {
     overflow: hidden;
@@ -1465,12 +1427,12 @@
     max-width: 100%;
 }
 
-/* убираем риск горизонтального вылета из-за AOS fade-left */
+
 .testimonial-swiper-wrap[data-aos="fade-left"] {
     transform-origin: center;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .about-testimonials__grid {
         grid-template-columns: 1fr;
@@ -1486,7 +1448,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 760px) {
     .about-testimonials .container {
         width: calc(100% - 28px);
@@ -1507,9 +1469,7 @@
     }
 }
 
-/* =========================================================
-   About Roadmap / 5 Cards Only
-   ========================================================= */
+
 
 .about-roadmap {
     position: relative;
@@ -1689,7 +1649,7 @@
     transform: translateX(5px);
 }
 
-/* Laptop */
+
 @media (max-width: 1180px) {
     .about-roadmap__inner {
         width: min(100% - 44px, 980px);
@@ -1711,7 +1671,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 560px) {
     .about-roadmap {
         padding: 48px 0 56px;
@@ -1739,10 +1699,7 @@
     }
 }
 
-/* =========================================================
-   Services steps heading width fix
-   Wider title area
-   ========================================================= */
+
 
 .services-steps__top {
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
@@ -1767,7 +1724,7 @@
     justify-self: end;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .services-steps__top {
         grid-template-columns: 1fr;
@@ -1786,7 +1743,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .services-steps__top h2 {
         max-width: 100%;
@@ -1798,10 +1755,7 @@
     }
 }
 
-/* =========================================================
-   Services showcase heading width fix
-   Wider centered title area
-   ========================================================= */
+
 
 .services-showcase .inner-section-head {
     max-width: 1120px;
@@ -1824,12 +1778,12 @@
     line-height: 1.72;
 }
 
-/* чуть меньше верхний отступ до свайпера, чтобы секция была компактнее */
+
 .services-showcase__grid {
     margin-top: 40px !important;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .services-showcase .inner-section-head {
         max-width: 860px;
@@ -1846,7 +1800,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .services-showcase .inner-section-head h2 {
         max-width: 100%;
@@ -1864,10 +1818,7 @@
     }
 }
 
-/* =========================================================
-   Horizontal Comparison Lists
-   No cards, only columns / lines / icons
-   ========================================================= */
+
 
 .compare-lists {
     position: relative;
@@ -2013,7 +1964,7 @@
     position: relative;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .compare-lists__grid {
         grid-template-columns: 1fr;
@@ -2032,7 +1983,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .compare-lists {
         padding: 58px 0;
@@ -2065,9 +2016,7 @@
     }
 }
 
-/* =========================================================
-   Compare lists heading center
-   ========================================================= */
+
 
 .compare-lists__top {
     text-align: center;
@@ -2089,10 +2038,7 @@
 }
 
 
-/* =========================================================
-   Compact Contact Form Section
-   Equal height list + form
-   ========================================================= */
+
 
 .contact-form-section {
     background: var(--deep-black);
@@ -2110,7 +2056,7 @@
     min-height: 100%;
 }
 
-/* LEFT SIDE — no card look, list style only */
+
 .contact-info-list-panel {
     display: flex;
     flex-direction: column;
@@ -2199,7 +2145,7 @@
     line-height: 1.6;
 }
 
-/* RIGHT SIDE — compact form, no default field style */
+
 .contact-form-card--compact {
     display: flex;
     align-items: center;
@@ -2300,7 +2246,7 @@
     min-height: 50px;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .contact-form-section__grid--compact {
         grid-template-columns: 1fr;
@@ -2318,7 +2264,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .contact-form-card--compact {
         padding: 20px;
@@ -2347,9 +2293,7 @@
     }
 }
 
-/* =========================================================
-   Contact Details Premium / Full Width Lists + Center Photo
-   ========================================================= */
+
 
 .contact-details-premium {
     position: relative;
@@ -2517,7 +2461,7 @@
     left: 54px;
 }
 
-/* Laptop */
+
 @media (max-width: 1180px) {
     .contact-details-premium__layout {
         grid-template-columns: 1fr 1fr;
@@ -2532,7 +2476,7 @@
     }
 }
 
-/* Tablet */
+
 @media (max-width: 860px) {
     .contact-details-premium__inner {
         width: min(100% - 36px, 760px);
@@ -2556,7 +2500,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 560px) {
     .contact-details-premium {
         padding: 58px 0;
@@ -2597,10 +2541,7 @@
 }
 
 
-/* =========================================================
-   FINAL FIX — Contact intro mobile/tablet
-   Put this at the very bottom of responsive.css
-   ========================================================= */
+
 
 @media (max-width: 760px) {
     .contact-intro.section {
@@ -2772,10 +2713,7 @@
     }
 }
 
-/* =========================================================
-   FIX — Contact intro text visibility
-   Text must stay in the second column
-   ========================================================= */
+
 
 @media (max-width: 760px) {
     .contact-intro-item__icon {
@@ -2819,10 +2757,7 @@
 }
 
 
-/* =========================================================
-   About Benefits Split
-   Text + privilege list + framed image
-   ========================================================= */
+
 
 .about-benefits {
     position: relative;
@@ -3016,7 +2951,7 @@
     stroke-width: 2;
 }
 
-/* Tablet */
+
 @media (max-width: 1080px) {
     .about-benefits__grid {
         grid-template-columns: 1fr;
@@ -3039,7 +2974,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .about-benefits__content h2 {
         font-size: clamp(2rem, 10vw, 3.15rem);
@@ -3101,9 +3036,7 @@
     }
 }
 
-/* =========================================================
-   TWEAK — About Benefits photo taller + one border under photo
-   ========================================================= */
+
 
 .about-benefits__media {
     position: relative !important;
@@ -3118,7 +3051,7 @@
     border-radius: 34px !important;
 }
 
-/* один бордер, именно под фото */
+
 .about-benefits__frame {
     position: absolute !important;
     z-index: 1 !important;
@@ -3128,7 +3061,7 @@
     pointer-events: none !important;
 }
 
-/* если старый второй бордер остался в HTML — скрываем */
+
 .about-benefits__frame--soft {
     display: none !important;
 }
@@ -3137,7 +3070,7 @@
     z-index: 5 !important;
 }
 
-/* Tablet */
+
 @media (max-width: 1080px) {
     .about-benefits__media {
         min-height: 540px !important;
@@ -3154,7 +3087,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .about-benefits__media {
         min-height: 390px !important;
@@ -3172,9 +3105,7 @@
     }
 }
 
-/* =========================================================
-   HARD FIX — move about benefits frame higher
-   ========================================================= */
+
 
 .about-benefits__media .about-benefits__frame,
 .about-benefits__media .about-benefits__frame--main {
@@ -3186,13 +3117,13 @@
     z-index: 1 !important;
 }
 
-/* фото остается поверх рамки */
+
 .about-benefits__photo {
     position: relative !important;
     z-index: 3 !important;
 }
 
-/* Tablet */
+
 @media (max-width: 1080px) {
 
     .about-benefits__media .about-benefits__frame,
@@ -3205,7 +3136,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
 
     .about-benefits__media .about-benefits__frame,
@@ -3218,10 +3149,7 @@
     }
 }
 
-/* =========================================================
-   About Compare Strip
-   Dark horizontal plus/minus section
-   ========================================================= */
+
 
 .about-compare-strip {
     position: relative;
@@ -3402,7 +3330,7 @@
     line-height: 1.55;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .about-compare-strip__top {
         grid-template-columns: 1fr;
@@ -3427,7 +3355,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .about-compare-strip {
         padding: 52px 0;
@@ -3474,9 +3402,7 @@
     }
 }
 
-/* =========================================================
-   TWEAK — About Compare Strip with photo background, no main title
-   ========================================================= */
+
 
 .about-compare-strip {
     position: relative !important;
@@ -3486,7 +3412,7 @@
     background: var(--deep-black) !important;
 }
 
-/* фото-фон */
+
 .about-compare-strip::before {
     content: "" !important;
     position: absolute !important;
@@ -3500,7 +3426,7 @@
     pointer-events: none !important;
 }
 
-/* medium black overlay поверх фото */
+
 .about-compare-strip::after {
     content: "" !important;
     position: absolute !important;
@@ -3515,13 +3441,13 @@
     pointer-events: none !important;
 }
 
-/* контент поверх фото */
+
 .about-compare-strip .container {
     position: relative !important;
     z-index: 2 !important;
 }
 
-/* верх стал маленьким, без большого заголовка */
+
 .about-compare-strip__top {
     display: block !important;
     margin-bottom: 26px !important;
@@ -3531,18 +3457,18 @@
     display: none !important;
 }
 
-/* чтобы kicker был аккуратный */
+
 .about-compare-strip__top .section-kicker {
     margin-bottom: 0 !important;
     color: var(--sand) !important;
 }
 
-/* сами две колонки делаем чуть плотнее */
+
 .about-compare-strip__grid {
     gap: clamp(32px, 5vw, 78px) !important;
 }
 
-/* чуть читаемее на фото */
+
 .about-compare-strip__heading h3 {
     text-shadow: 0 12px 28px rgba(0, 0, 0, 0.34) !important;
 }
@@ -3551,7 +3477,7 @@
     color: rgba(244, 238, 220, 0.78) !important;
 }
 
-/* тонкие линии на фото */
+
 .about-compare-strip__list {
     border-top-color: rgba(244, 238, 220, 0.2) !important;
 }
@@ -3564,7 +3490,7 @@
     border-left-color: rgba(217, 201, 162, 0.28) !important;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .about-compare-strip__top {
         margin-bottom: 22px !important;
@@ -3576,7 +3502,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .about-compare-strip {
         padding: 48px 0 !important;
@@ -3587,9 +3513,7 @@
     }
 }
 
-/* =========================================================
-   HARD FIX — visible photo background for compare strip
-   ========================================================= */
+
 
 .about-compare-strip {
     position: relative !important;
@@ -3606,12 +3530,12 @@
         url("../images/services/all-services-hero.jpg") center / cover no-repeat !important;
 }
 
-/* убираем старый before, который мог перекрывать/ломать фон */
+
 .about-compare-strip::before {
     display: none !important;
 }
 
-/* затемнение поверх фото, но НЕ слишком темное */
+
 .about-compare-strip::after {
     content: "" !important;
     position: absolute !important;
@@ -3629,24 +3553,21 @@
     z-index: 2 !important;
 }
 
-/* чтобы текст читался на фото */
+
 .about-compare-strip__heading h3,
 .about-compare-strip__list p,
 .about-compare-strip .section-kicker {
     text-shadow: 0 12px 28px rgba(0, 0, 0, 0.45) !important;
 }
 
-/* сделать параграфы в секции about-compare-strip ярче и жирнее */
+
 .about-compare-strip__list p {
     color: rgba(255, 250, 235, 0.96) !important;
     font-weight: 700 !important;
     opacity: 1 !important;
 }
 
-/* =========================================================
-   Service Insight Split
-   Text + photo + accordion
-   ========================================================= */
+
 
 .service-insight {
     position: relative;
@@ -3824,7 +3745,7 @@
     line-height: 1.6;
 }
 
-/* Tablet */
+
 @media (max-width: 1080px) {
     .service-insight__grid {
         grid-template-columns: 1fr 1fr;
@@ -3853,7 +3774,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 760px) {
     .service-insight__grid {
         grid-template-columns: 1fr;
@@ -3905,24 +3826,21 @@
     }
 }
 
-/* =========================================================
-   TWEAK — Service Insight wider layout
-   wider text + photo + accordion cards
-   ========================================================= */
+
 
 .service-insight>.container {
     width: min(100% - 36px, 1480px) !important;
     max-width: 1480px !important;
 }
 
-/* шире вся сетка: текст / фото / accordion */
+
 .service-insight__grid {
     grid-template-columns:
         minmax(360px, 1.02fr) minmax(340px, 0.9fr) minmax(370px, 1fr) !important;
     gap: clamp(28px, 3.6vw, 58px) !important;
 }
 
-/* левый блок с заголовком шире */
+
 .service-insight__intro {
     max-width: 640px !important;
 }
@@ -3936,7 +3854,7 @@
     max-width: 610px !important;
 }
 
-/* фото шире и чуть солиднее */
+
 .service-insight__media {
     min-height: 500px !important;
 }
@@ -3952,7 +3870,7 @@
     border-radius: 28px !important;
 }
 
-/* accordion-блок шире */
+
 .service-insight__accordion {
     width: 100% !important;
     max-width: 430px !important;
@@ -3972,7 +3890,7 @@
     font-size: 0.92rem !important;
 }
 
-/* Tablet */
+
 @media (max-width: 1080px) {
     .service-insight>.container {
         width: min(100% - 32px, 920px) !important;
@@ -4006,7 +3924,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 760px) {
     .service-insight>.container {
         width: min(100% - 28px, 720px) !important;
@@ -4034,7 +3952,7 @@
     }
 }
 
-/* compact 4-card accordion inside service insight */
+
 .service-insight__accordion {
     gap: 10px !important;
 }

@@ -2,24 +2,7 @@
 
 declare(strict_types=1);
 
-/*
-|--------------------------------------------------------------------------
-| SlabWay Contact Form Handler
-| File: contact.php
-|--------------------------------------------------------------------------
-| Accepts POST fields:
-| - fullName
-| - email
-| - phone
-| - service
-| - message
-| - sourcePage
-|
-| Returns JSON:
-| - success: true/false
-| - message: string
-|--------------------------------------------------------------------------
-*/
+
 
 header('Content-Type: application/json; charset=UTF-8');
 header('X-Content-Type-Options: nosniff');
@@ -36,22 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-/*
-|--------------------------------------------------------------------------
-| Easy settings
-|--------------------------------------------------------------------------
-| Change recipient email here.
-|--------------------------------------------------------------------------
-*/
+
 
 $recipientEmail = 'hello@slabway.com';
 $siteName = 'SlabWay';
 
-/*
-|--------------------------------------------------------------------------
-| Helpers
-|--------------------------------------------------------------------------
-*/
+
 
 function clean_input(?string $value): string
 {
@@ -86,11 +59,7 @@ function json_response(bool $success, string $message, int $statusCode = 200): v
     exit;
 }
 
-/*
-|--------------------------------------------------------------------------
-| Collect fields
-|--------------------------------------------------------------------------
-*/
+
 
 $fullName = clean_input($_POST['fullName'] ?? '');
 $email = clean_input($_POST['email'] ?? '');
@@ -99,11 +68,7 @@ $service = clean_input($_POST['service'] ?? '');
 $message = clean_multiline($_POST['message'] ?? '');
 $sourcePage = clean_input($_POST['sourcePage'] ?? 'SlabWay website form');
 
-/*
-|--------------------------------------------------------------------------
-| Validation
-|--------------------------------------------------------------------------
-*/
+
 
 if ($fullName === '' || mb_strlen($fullName) < 2) {
     json_response(false, 'Please enter your full name.', 422);
@@ -125,13 +90,7 @@ if ($message === '' || mb_strlen($message) < 10) {
     json_response(false, 'Please add a few project details.', 422);
 }
 
-/*
-|--------------------------------------------------------------------------
-| Basic spam protection
-|--------------------------------------------------------------------------
-| If a hidden honeypot field is added later, this will catch it.
-|--------------------------------------------------------------------------
-*/
+
 
 $website = clean_input($_POST['website'] ?? '');
 
@@ -139,11 +98,7 @@ if ($website !== '') {
     json_response(true, 'Thank you. Your concrete request was received.');
 }
 
-/*
-|--------------------------------------------------------------------------
-| Email content
-|--------------------------------------------------------------------------
-*/
+
 
 $subject = "New Concrete Request From {$siteName}";
 
@@ -179,14 +134,7 @@ $headers = [
     'Reply-To: ' . $fullName . ' <' . $email . '>'
 ];
 
-/*
-|--------------------------------------------------------------------------
-| Send email
-|--------------------------------------------------------------------------
-| Note:
-| PHP mail() requires working mail configuration on hosting/server.
-|--------------------------------------------------------------------------
-*/
+
 
 $mailSent = @mail(
     $recipientEmail,

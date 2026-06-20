@@ -1,22 +1,6 @@
 'use strict';
 
-/* =========================================================
-   SlabWay — Main JavaScript
-   File: assets/js/main.js
 
-   Includes:
-   - config injection
-   - header/footer/mobile menu rendering
-   - Lucide icons init
-   - AOS init
-   - sticky header scroll state
-   - services dropdown support
-   - accordions
-   - cookie banner
-   - global CTA injection
-   - counters helper
-   - section rail
-   ========================================================= */
 
 (function () {
     const config = window.SLABWAY_CONFIG || {};
@@ -105,10 +89,7 @@
     function getBrandMarkup() {
         const logoPath = config.brand?.logoPath || config.images?.logo || 'assets/images/logo.svg';
 
-        /*
-           Single source of truth:
-           Change company.name in config.js and the logo text changes everywhere.
-        */
+        
         const name = config.company?.name || config.brand?.name || 'SlabWay';
         const accentWord = config.brand?.accentWord || '';
 

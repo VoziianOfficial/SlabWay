@@ -1,16 +1,6 @@
 'use strict';
 
-/* =========================================================
-   SlabWay — Contact Page JavaScript
-   File: assets/js/contact.js
 
-   Includes:
-   - service select options from config
-   - form validation
-   - fetch submit to contact.php
-   - success/error messages
-   - compact UX helpers
-   ========================================================= */
 
 (function () {
     const config = window.SLABWAY_CONFIG || {};

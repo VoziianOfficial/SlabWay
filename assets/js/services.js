@@ -1,25 +1,6 @@
 'use strict';
 
-/* =========================================================
-   SlabWay — Service Pages JavaScript
-   File: assets/js/services.js
 
-   Used for:
-   - concrete-driveways.html
-   - concrete-patios.html
-   - concrete-slabs.html
-   - concrete-repair.html
-   - stamped-concrete.html
-   - sidewalks-walkways.html
-
-   Includes:
-   - service-specific hero injection
-   - service icon strip
-   - service overview split
-   - project type panels
-   - aggregator reminder
-   - section rail
-   ========================================================= */
 
 (function () {
     const config = window.SLABWAY_CONFIG || {};

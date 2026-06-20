@@ -1,17 +1,6 @@
-/* =========================================================
-   SlabWay — Responsive Fixes
-   File: assets/css/responsive.css
 
-   Final cross-page responsive polish:
-   - no horizontal scroll
-   - safer images/cards/forms
-   - tablet/mobile layout fixes
-   - compact header/menu/CTA
-   ========================================================= */
 
-/* =========================================================
-   Global Overflow Protection
-   ========================================================= */
+
 
 html,
 body {
@@ -42,9 +31,7 @@ iframe {
     max-width: calc(100% - 40px);
 }
 
-/* =========================================================
-   Large Desktop / Small Laptop
-   ========================================================= */
+
 
 @media (max-width: 1280px) {
     .site-header__shell {
@@ -73,9 +60,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Tablet Landscape
-   ========================================================= */
+
 
 @media (max-width: 1120px) {
     body {
@@ -167,9 +152,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Tablet Portrait
-   ========================================================= */
+
 
 @media (max-width: 980px) {
     .section {
@@ -329,9 +312,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Mobile General
-   ========================================================= */
+
 
 @media (max-width: 760px) {
     :root {
@@ -961,9 +942,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Small Mobile
-   ========================================================= */
+
 
 @media (max-width: 520px) {
 
@@ -1116,9 +1095,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Extra Small Mobile
-   ========================================================= */
+
 
 @media (max-width: 390px) {
     .site-brand__text {
@@ -1173,9 +1150,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Landscape Mobile Height Fix
-   ========================================================= */
+
 
 @media (max-height: 560px) and (orientation: landscape) {
     .home-hero {
@@ -1195,9 +1170,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Touch Devices Hover Safety
-   ========================================================= */
+
 
 @media (hover: none) {
 
@@ -1224,9 +1197,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Reduced Motion Final Safety
-   ========================================================= */
+
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -1255,10 +1226,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Shared Hero correction
-   Wider content + smaller visual height
-   ========================================================= */
+
 
 .shared-hero {
     min-height: 680px;
@@ -1298,7 +1266,7 @@ iframe {
     margin-top: 30px;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .shared-hero {
         min-height: 620px;
@@ -1321,7 +1289,7 @@ iframe {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .shared-hero {
         min-height: auto;
@@ -1355,10 +1323,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Service Hero correction
-   Same wider / lower style for service pages
-   ========================================================= */
+
 
 .service-hero__content {
     width: min(1180px, calc(100% - 48px));
@@ -1400,10 +1365,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Home Hero correction
-   Wider content + slightly smaller H1
-   ========================================================= */
+
 
 .home-hero {
     min-height: 860px;
@@ -1437,14 +1399,14 @@ iframe {
     margin-top: 30px;
 }
 
-/* если декоративная линия слишком низко/широко — чуть подправим */
+
 .home-hero__line {
     width: min(1180px, calc(100% - 48px));
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .home-hero {
         min-height: 690px;
@@ -1471,7 +1433,7 @@ iframe {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .home-hero {
         min-height: auto;
@@ -1504,10 +1466,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   Home About mobile/tablet image center fix
-   Prevent photo/frame from going outside container
-   ========================================================= */
+
 
 @media (max-width: 1180px) {
     .home-about {
@@ -1545,7 +1504,7 @@ iframe {
         justify-self: center;
     }
 
-    /* главное — убираем отрицательный right */
+    
     .home-about__frame {
         inset: 18px 18px -12px 18px;
         max-width: calc(100% - 36px);
@@ -1603,10 +1562,7 @@ iframe {
 }
 
 
-/* =========================================================
-   About Platform mobile/tablet image center fix
-   Prevent photo/frame from going outside container
-   ========================================================= */
+
 
 @media (max-width: 1180px) {
     .about-platform {
@@ -1644,7 +1600,7 @@ iframe {
         justify-self: center;
     }
 
-    /* главное — убираем отрицательные стороны */
+    
     .about-platform__frame {
         inset: 18px 18px -12px 18px;
         max-width: calc(100% - 36px);
@@ -1705,33 +1661,27 @@ iframe {
     }
 }
 
-/* =========================================================
-   Home About — reduce top padding by half
-   ========================================================= */
+
 
 .home-about.section {
     padding-top: clamp(42px, 4vw, 64px) !important;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .home-about.section {
         padding-top: 40px !important;
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .home-about.section {
         padding-top: 34px !important;
     }
 }
 
-/* =========================================================
-   FINAL FIX — Legal pages container overflow
-   Privacy / Terms / Cookies
-   Put at the VERY bottom of responsive.css
-   ========================================================= */
+
 
 .legal-page {
     width: 100%;
@@ -1800,14 +1750,14 @@ iframe {
     word-break: normal;
 }
 
-/* tables should scroll inside their own wrapper, not push the page */
+
 .legal-table-wrap {
     max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-/* Tablet */
+
 @media (max-width: 1080px) {
     .legal-content__grid {
         grid-template-columns: 1fr;
@@ -1820,7 +1770,7 @@ iframe {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 760px) {
     .legal-page .container {
         width: calc(100% - 28px);
@@ -1875,7 +1825,7 @@ iframe {
     }
 }
 
-/* Extra small */
+
 @media (max-width: 420px) {
     .legal-page .container {
         width: calc(100% - 24px);
@@ -1982,12 +1932,9 @@ iframe {
     }
 }
 
-/* =========================================================
-   HARD RESET — Service Insight responsive without conflicts
-   Put this at the very bottom of assets/css/responsive.css
-   ========================================================= */
 
-/* ---------- DESKTOP / BASE CLEANUP ---------- */
+
+
 
 .service-insight {
     overflow: hidden !important;
@@ -2059,7 +2006,7 @@ iframe {
     line-height: 1.52 !important;
 }
 
-/* ---------- TABLET: intro / wide photo / 2x2 accordion ---------- */
+
 
 @media (min-width: 761px) and (max-width: 1080px) {
     .service-insight {
@@ -2162,7 +2109,7 @@ iframe {
     }
 }
 
-/* ---------- MOBILE: simple vertical layout ---------- */
+
 
 @media (max-width: 760px) {
     .service-insight {
@@ -2274,10 +2221,7 @@ iframe {
     }
 }
 
-/* =========================================================
-   HARD FIX — Service Insight image centered on tablet/mobile
-   Prevent photo/frame from leaving container
-   ========================================================= */
+
 
 @media (max-width: 1080px) {
     .service-insight {
@@ -2323,7 +2267,7 @@ iframe {
         object-fit: cover !important;
     }
 
-    /* рамку больше не выпускаем за контейнер */
+    
     .service-insight__frame {
         inset: 18px 18px -12px 18px !important;
         max-width: calc(100% - 36px) !important;
@@ -2371,17 +2315,14 @@ iframe {
     }
 }
 
-/* Hide Service Insight accordion on all tablet widths */
+
 @media (min-width: 761px) and (max-width: 1180px) {
     .service-insight__accordion {
         display: none !important;
     }
 }
 
-/* =========================================================
-   FIX — Service Benefits top width same as photo
-   Equal side offsets for top block and photo
-   ========================================================= */
+
 
 .service-benefits-quote__top,
 .service-benefits-quote__photo,
@@ -2392,13 +2333,13 @@ iframe {
     box-sizing: border-box !important;
 }
 
-/* верхний блок теперь не растягивается шире фото */
+
 .service-benefits-quote__top {
     grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr) !important;
     gap: clamp(42px, 5vw, 78px) !important;
 }
 
-/* заголовку даём больше места внутри этой одинаковой ширины */
+
 .service-benefits-quote__title {
     max-width: 720px !important;
 }
@@ -2408,13 +2349,13 @@ iframe {
     max-width: 720px !important;
 }
 
-/* фото остаётся горизонтальным и такой же ширины */
+
 .service-benefits-quote__photo {
     display: block !important;
     height: clamp(360px, 34vw, 520px) !important;
 }
 
-/* Tablet */
+
 @media (max-width: 1080px) {
 
     .service-benefits-quote__top,
@@ -2435,7 +2376,7 @@ iframe {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-benefits-quote__top {
         gap: 28px !important;
@@ -2452,19 +2393,19 @@ iframe {
     }
 }
 
-/* Service Benefits Quote — slightly lower photo height */
+
 .service-benefits-quote__photo {
     height: clamp(310px, 28vw, 430px) !important;
 }
 
-/* Tablet */
+
 @media (max-width: 1080px) {
     .service-benefits-quote__photo {
         height: 340px !important;
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-benefits-quote__photo {
         height: 240px !important;

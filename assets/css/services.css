@@ -1,19 +1,6 @@
-/* =========================================================
-   SlabWay — Individual Service Pages Styles
-   File: assets/css/services.css
 
-   Used for:
-   concrete-driveways.html
-   concrete-patios.html
-   concrete-slabs.html
-   concrete-repair.html
-   stamped-concrete.html
-   sidewalks-walkways.html
-   ========================================================= */
 
-/* =========================================================
-   Service Page Base
-   ========================================================= */
+
 
 .service-page {
     background: var(--cement-soft);
@@ -43,9 +30,7 @@
     max-width: 1040px;
 }
 
-/* =========================================================
-   Service Icon Strip
-   ========================================================= */
+
 
 .service-icon-strip {
     padding: 0;
@@ -117,9 +102,7 @@
     transform: scaleX(1);
 }
 
-/* =========================================================
-   Service Overview Split
-   ========================================================= */
+
 
 .service-overview {
     background: var(--cement-light);
@@ -234,9 +217,7 @@
     stroke-width: 2;
 }
 
-/* =========================================================
-   Service Project Types / Vertical Panels
-   ========================================================= */
+
 
 .service-types {
     position: relative;
@@ -397,9 +378,7 @@
     font-weight: 650;
 }
 
-/* =========================================================
-   Aggregator Reminder Quote
-   ========================================================= */
+
 
 .service-reminder {
     padding: 74px 0;
@@ -461,10 +440,7 @@
     background: rgba(189, 165, 106, 0.36);
 }
 
-/* =========================================================
-   Related Service Mini Links
-   Optional reusable block
-   ========================================================= */
+
 
 .related-services {
     background: var(--deep-black);
@@ -566,9 +542,7 @@
     text-transform: uppercase;
 }
 
-/* =========================================================
-   Service Page Small Decorative Elements
-   ========================================================= */
+
 
 .service-dust-line {
     position: absolute;
@@ -625,9 +599,7 @@
     transform: rotate(180deg);
 }
 
-/* =========================================================
-   Responsive — Service Pages
-   ========================================================= */
+
 
 @media (max-width: 1180px) {
 
@@ -823,10 +795,7 @@
     }
 }
 
-/* =========================================================
-   Service Benefits Quote
-   Black editorial benefits section
-   ========================================================= */
+
 
 .service-benefits-quote {
     position: relative;
@@ -1004,7 +973,7 @@
     text-wrap: balance;
 }
 
-/* Tablet */
+
 @media (max-width: 1080px) {
     .service-benefits-quote__inner {
         width: min(100% - 40px, 900px);
@@ -1044,7 +1013,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-benefits-quote {
         padding: 56px 0;
@@ -1108,15 +1077,13 @@
     }
 }
 
-/* =========================================================
-   FINAL TWEAK — Service Benefits Quote wider editorial layout
-   ========================================================= */
+
 
 .service-benefits-quote__inner {
     width: min(1600px, calc(100% - 56px)) !important;
 }
 
-/* верх: даём заголовку больше ширины */
+
 .service-benefits-quote__top {
     grid-template-columns: minmax(520px, 1.08fr) minmax(560px, 0.92fr) !important;
     gap: clamp(44px, 6vw, 88px) !important;
@@ -1132,7 +1099,7 @@
     font-size: clamp(2.35rem, 4.6vw, 5.25rem) !important;
 }
 
-/* низ: фото сверху широкое, statement после него на всю ширину */
+
 .service-benefits-quote__bottom {
     display: grid !important;
     grid-template-columns: 1fr !important;
@@ -1141,7 +1108,7 @@
     margin-top: clamp(58px, 7vw, 8px) !important;
 }
 
-/* фото делаем шире и горизонтальным */
+
 .service-benefits-quote__photo {
     width: 100% !important;
     max-width: 1320px !important;
@@ -1150,7 +1117,7 @@
     border-radius: 32px !important;
 }
 
-/* statement после фото — горизонтально на всю ширину */
+
 .service-benefits-quote__statement {
     width: 100% !important;
     max-width: 1320px !important;
@@ -1179,7 +1146,7 @@
     line-height: 1.08 !important;
 }
 
-/* Tablet */
+
 @media (max-width: 1080px) {
     .service-benefits-quote__inner {
         width: min(100% - 40px, 940px) !important;
@@ -1207,7 +1174,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-benefits-quote__inner {
         width: calc(100% - 28px) !important;

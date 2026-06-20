@@ -1,25 +1,6 @@
 'use strict';
 
-/* =========================================================
-   SlabWay — Inner Pages JavaScript
-   File: assets/js/inner.js
 
-   Used for:
-   - about.html
-   - all-services.html
-   - contact.html
-
-   Includes:
-   - about icon marquee rendering
-   - testimonials swiper rendering
-   - about FAQ rendering
-   - all-services icon strip rendering
-   - all-services swiper rendering
-   - animated service text panels
-   - three steps rendering
-   - contact intro rendering
-   - local accordion init for dynamically injected content
-   ========================================================= */
 
 (function () {
     const config = window.SLABWAY_CONFIG || {};
@@ -677,9 +658,7 @@
         `;
     }
 
-    /* =========================================================
-   Service Insight Accordion
-   ========================================================= */
+    
 
     (function initServiceInsightAccordion() {
         const accordion = document.querySelector('[data-service-insight-accordion]');

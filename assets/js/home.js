@@ -1,16 +1,6 @@
 'use strict';
 
-/* =========================================================
-   SlabWay — Home Page JavaScript
-   File: assets/js/home.js
 
-   Includes:
-   - home intro service cards rendering
-   - popular services cards rendering
-   - home FAQ rendering
-   - home section rail rendering
-   - small page-specific refresh for Lucide/AOS
-   ========================================================= */
 
 (function () {
     const config = window.SLABWAY_CONFIG || {};

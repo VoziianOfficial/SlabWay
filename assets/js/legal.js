@@ -1,20 +1,6 @@
 'use strict';
 
-/* =========================================================
-   SlabWay — Legal Pages JavaScript
-   File: assets/js/legal.js
 
-   Used for:
-   - privacy-policy.html
-   - terms-of-service.html
-   - cookie-policy.html
-
-   Includes:
-   - legal sidebar active state
-   - legal contact card rendering from config
-   - current year / updated note
-   - Lucide/AOS refresh
-   ========================================================= */
 
 (function () {
     const config = window.SLABWAY_CONFIG || {};
