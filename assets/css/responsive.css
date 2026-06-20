@@ -1704,3 +1704,25 @@ iframe {
         font-size: 0.68rem;
     }
 }
+
+/* =========================================================
+   Home About — reduce top padding by half
+   ========================================================= */
+
+.home-about.section {
+    padding-top: clamp(42px, 4vw, 64px) !important;
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+    .home-about.section {
+        padding-top: 40px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .home-about.section {
+        padding-top: 34px !important;
+    }
+}

@@ -69,7 +69,7 @@ window.SLABWAY_CONFIG = {
             },
             overview: {
                 kicker: 'DRIVEWAY REQUESTS',
-                heading: 'Compare Concrete Driveway Options For A Cleaner Property Entrance',
+                heading: 'Сtart Driveway Requests',
                 text: 'SlabWay helps homeowners start driveway-related requests and compare local provider options for new driveway planning, replacements, widened access areas, and clean concrete surfaces.',
                 list: [
                     'New driveway request paths',
@@ -107,7 +107,7 @@ window.SLABWAY_CONFIG = {
             },
             overview: {
                 kicker: 'PATIO PROJECTS',
-                heading: 'Plan Outdoor Concrete Spaces With Better Service Options',
+                heading: 'Start Patio Requests',
                 text: 'Use SlabWay to start a concrete patio request and organize details for outdoor seating areas, backyard layouts, entertainment spaces, and practical hardscape surfaces.',
                 list: [
                     'Backyard patio planning',
@@ -145,7 +145,7 @@ window.SLABWAY_CONFIG = {
             },
             overview: {
                 kicker: 'SLAB PROJECTS',
-                heading: 'Start Concrete Slab Requests For Utility And Support Spaces',
+                heading: 'Start Slab Requests That Fit Your Needs',
                 text: 'SlabWay helps users describe concrete slab projects such as shed bases, garage slabs, utility pads, workshop areas, and other flat support surfaces before reviewing provider options.',
                 list: [
                     'Garage and shed slab requests',
@@ -183,7 +183,7 @@ window.SLABWAY_CONFIG = {
             },
             overview: {
                 kicker: 'REPAIR REQUESTS',
-                heading: 'Organize Repair Details For Damaged Concrete Surfaces',
+                heading: 'Open Repair Requests That Fit Your Needs',
                 text: 'Start a request for cracked, uneven, chipped, aging, or worn concrete surfaces and compare local provider options for repair or resurfacing-related project paths.',
                 list: [
                     'Cracks and surface wear',
@@ -221,7 +221,7 @@ window.SLABWAY_CONFIG = {
             },
             overview: {
                 kicker: 'DECORATIVE CONCRETE',
-                heading: 'Explore Stamped Concrete Options With A More Custom Look',
+                heading: 'Start Stamped Concrete Requests That Fit Your Needs',
                 text: 'SlabWay helps users start decorative concrete requests for stamped patterns, textured finishes, patios, walkways, driveways, and outdoor surfaces with more visual character.',
                 list: [
                     'Decorative finish preferences',
