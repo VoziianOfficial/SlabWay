@@ -259,7 +259,7 @@ window.SLABWAY_CONFIG = {
             },
             overview: {
                 kicker: 'WALKWAY REQUESTS',
-                heading: 'Create Cleaner Concrete Paths Around The Property',
+                heading: 'Start Walkway Requests That Fit Your Needs',
                 text: 'Start a request for front-entry walkways, garden paths, side-yard routes, connecting sidewalks, and practical concrete movement areas around the home.',
                 list: [
                     'Entry path planning',
