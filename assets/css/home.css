@@ -1259,3 +1259,509 @@
     }
 }
 
+/* =========================================================
+   FINAL FIX — Request Board V3
+   Logo as standalone mark + 3 even text cards
+   ========================================================= */
+
+.home-request-board-v3__cards {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, 188px) !important;
+    gap: 20px !important;
+    align-items: center !important;
+    overflow: visible !important;
+    padding-top: 8px !important;
+    padding-bottom: 12px !important;
+}
+
+/* убираем старую "карточку логотипа", теперь логотип сам по себе */
+.home-request-board-v3__logo-mark {
+    position: relative !important;
+    height: 188px !important;
+    min-height: 188px !important;
+    max-height: 188px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    pointer-events: none;
+}
+
+.home-request-board-v3__logo-mark::before,
+.home-request-board-v3__logo-mark::after {
+    display: none !important;
+}
+
+.home-request-board-v3__logo-mark img {
+    width: min(84%, 210px) !important;
+    max-height: 170px !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 22px 34px rgba(0, 0, 0, 0.2)) !important;
+}
+
+/* мягкая версия логотипа */
+.home-request-board-v3__logo-mark--soft img {
+    opacity: 0.82 !important;
+}
+
+/* обычные карточки: одинаковая высота и ровная текстовая структура */
+.home-request-board-v3__card {
+    height: 188px !important;
+    min-height: 188px !important;
+    max-height: 188px !important;
+    display: grid !important;
+    grid-template-rows: 16px 38px 54px !important;
+    align-content: end !important;
+    gap: 8px !important;
+    padding: 22px 20px 18px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+}
+
+/* иконка справа сверху */
+.home-request-board-v3__card>svg {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    width: 38px !important;
+    height: 38px !important;
+}
+
+/* eyebrow всегда одинаковой высоты */
+.home-request-board-v3__eyebrow {
+    height: 16px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    color: var(--old-brass) !important;
+    font-size: 0.66rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.13em !important;
+    line-height: 1 !important;
+    text-transform: uppercase !important;
+}
+
+/* заголовки теперь занимают одинаковую высоту */
+.home-request-board-v3__card h3 {
+    min-height: 38px !important;
+    max-height: 38px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    max-width: 240px !important;
+    color: var(--deep-black) !important;
+    font-size: 1.15rem !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.04em !important;
+}
+
+/* текст тоже одинаковый по высоте */
+.home-request-board-v3__card p:not(.home-request-board-v3__eyebrow) {
+    min-height: 54px !important;
+    max-height: 54px !important;
+    margin: 0 !important;
+    max-width: 320px !important;
+    color: rgba(36, 35, 31, 0.7) !important;
+    font-size: 0.82rem !important;
+    line-height: 1.38 !important;
+
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+/* layout desktop: 1 и 4 — логотипы, 2/3/5 — карточки */
+@media (min-width: 1181px) {
+    .home-request-board-v3__cards>*:nth-child(1) {
+        grid-column: 1 / 3 !important;
+        grid-row: 1 !important;
+        transform: rotate(-5deg) translateY(8px) !important;
+    }
+
+    .home-request-board-v3__cards>*:nth-child(2) {
+        grid-column: 3 / 5 !important;
+        grid-row: 1 !important;
+        transform: rotate(2.5deg) translateY(-4px) !important;
+    }
+
+    .home-request-board-v3__cards>*:nth-child(3) {
+        grid-column: 5 / 7 !important;
+        grid-row: 1 !important;
+        transform: rotate(-2.5deg) translateY(7px) !important;
+    }
+
+    .home-request-board-v3__cards>*:nth-child(4) {
+        grid-column: 2 / 4 !important;
+        grid-row: 2 !important;
+        transform: rotate(4deg) translateY(-4px) !important;
+    }
+
+    .home-request-board-v3__cards>*:nth-child(5) {
+        grid-column: 4 / 6 !important;
+        grid-row: 2 !important;
+        transform: rotate(-3.5deg) translateY(6px) !important;
+    }
+
+    .home-request-board-v3__card:hover {
+        transform: translateY(-10px) !important;
+    }
+}
+
+/* tablet */
+@media (min-width: 761px) and (max-width: 1180px) {
+    .home-request-board-v3__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-rows: none !important;
+        gap: 16px !important;
+    }
+
+    .home-request-board-v3__logo-mark,
+    .home-request-board-v3__card {
+        height: 186px !important;
+        min-height: 186px !important;
+        max-height: 186px !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .home-request-board-v3__cards>*:nth-child(5) {
+        grid-column: 1 / -1 !important;
+        width: calc((100% - 16px) / 2) !important;
+        justify-self: center !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 760px) {
+    .home-request-board-v3__cards {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: none !important;
+        gap: 14px !important;
+        padding: 0 !important;
+    }
+
+    .home-request-board-v3__logo-mark {
+        height: 130px !important;
+        min-height: 130px !important;
+        max-height: 130px !important;
+        transform: none !important;
+    }
+
+    .home-request-board-v3__logo-mark img {
+        width: min(60%, 160px) !important;
+        max-height: 120px !important;
+    }
+
+    .home-request-board-v3__card {
+        height: 186px !important;
+        min-height: 186px !important;
+        max-height: 186px !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        transform: none !important;
+        border-radius: 20px !important;
+        padding: 20px 18px 16px !important;
+    }
+
+    .home-request-board-v3__card:hover {
+        transform: translateY(-4px) !important;
+    }
+
+    .home-request-board-v3__card>svg {
+        top: 16px !important;
+        right: 16px !important;
+        width: 34px !important;
+        height: 34px !important;
+    }
+}
+
+/* =========================================================
+   FINAL — Request Board V3
+   2 standalone logos + 4 even text cards
+   ========================================================= */
+
+/* top: заголовок слева в 3 строки, параграф справа напротив */
+.home-request-board-v3__top {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.65fr) !important;
+    gap: clamp(34px, 6vw, 96px) !important;
+    align-items: start !important;
+    margin-bottom: 44px !important;
+}
+
+.home-request-board-v3__heading {
+    max-width: 760px !important;
+}
+
+.home-request-board-v3__heading h2 {
+    max-width: 720px !important;
+    color: var(--deep-black) !important;
+    font-size: clamp(2.35rem, 4.4vw, 5.05rem) !important;
+    line-height: 0.96 !important;
+    letter-spacing: -0.062em !important;
+}
+
+.home-request-board-v3__heading h2 span {
+    display: block !important;
+}
+
+.home-request-board-v3__side {
+    display: grid !important;
+    justify-items: start !important;
+    gap: 22px !important;
+    padding-top: 42px !important;
+}
+
+.home-request-board-v3__side p {
+    max-width: 520px !important;
+    color: rgba(36, 35, 31, 0.7) !important;
+    font-size: 1rem !important;
+    line-height: 1.72 !important;
+}
+
+/* cards layout: 6 элементов, 2 ряда по 3 блока */
+.home-request-board-v3__cards {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, 188px) !important;
+    gap: 20px !important;
+    align-items: center !important;
+    overflow: visible !important;
+    padding-top: 8px !important;
+    padding-bottom: 14px !important;
+}
+
+/* общая высота для карточек */
+.home-request-board-v3__card {
+    height: 188px !important;
+    min-height: 188px !important;
+    max-height: 188px !important;
+    display: grid !important;
+    grid-template-rows: 16px 38px 54px !important;
+    align-content: end !important;
+    gap: 8px !important;
+    padding: 22px 20px 18px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+}
+
+/* логотипы НЕ карточки */
+.home-request-board-v3__logo-mark {
+    position: relative !important;
+    height: 188px !important;
+    min-height: 188px !important;
+    max-height: 188px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    pointer-events: none !important;
+}
+
+.home-request-board-v3__logo-mark::before,
+.home-request-board-v3__logo-mark::after {
+    display: none !important;
+}
+
+.home-request-board-v3__logo-mark img {
+    width: min(88%, 220px) !important;
+    max-height: 174px !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 22px 34px rgba(0, 0, 0, 0.2)) !important;
+}
+
+.home-request-board-v3__logo-mark--soft img {
+    opacity: 0.82 !important;
+}
+
+/* ровная структура текста в карточках */
+.home-request-board-v3__eyebrow {
+    height: 16px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    font-size: 0.66rem !important;
+    line-height: 1 !important;
+}
+
+.home-request-board-v3__card h3 {
+    min-height: 38px !important;
+    max-height: 38px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    max-width: 240px !important;
+    font-size: 1.15rem !important;
+    line-height: 1.04 !important;
+}
+
+.home-request-board-v3__card p:not(.home-request-board-v3__eyebrow) {
+    min-height: 54px !important;
+    max-height: 54px !important;
+    margin: 0 !important;
+    max-width: 320px !important;
+    font-size: 0.82rem !important;
+    line-height: 1.38 !important;
+
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+.home-request-board-v3__card>svg {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    width: 38px !important;
+    height: 38px !important;
+}
+
+/* desktop placement: одинаковые размеры, 2 ряда */
+@media (min-width: 1181px) {
+    .home-request-board-v3__cards>*:nth-child(1) {
+        grid-column: 1 / 3 !important;
+        grid-row: 1 !important;
+        transform: rotate(-4.5deg) translateY(7px) !important;
+    }
+
+    .home-request-board-v3__cards>*:nth-child(2) {
+        grid-column: 3 / 5 !important;
+        grid-row: 1 !important;
+        transform: rotate(2.2deg) translateY(-4px) !important;
+    }
+
+    .home-request-board-v3__cards>*:nth-child(3) {
+        grid-column: 5 / 7 !important;
+        grid-row: 1 !important;
+        transform: rotate(-2.3deg) translateY(7px) !important;
+    }
+
+    .home-request-board-v3__cards>*:nth-child(4) {
+        grid-column: 1 / 3 !important;
+        grid-row: 2 !important;
+        transform: rotate(3.8deg) translateY(-5px) !important;
+    }
+
+    .home-request-board-v3__cards>*:nth-child(5) {
+        grid-column: 3 / 5 !important;
+        grid-row: 2 !important;
+        transform: rotate(-2.4deg) translateY(5px) !important;
+    }
+
+    .home-request-board-v3__cards>*:nth-child(6) {
+        grid-column: 5 / 7 !important;
+        grid-row: 2 !important;
+        transform: rotate(2.8deg) translateY(-3px) !important;
+    }
+
+    .home-request-board-v3__card:hover {
+        transform: translateY(-10px) !important;
+    }
+}
+
+/* tablet */
+@media (min-width: 761px) and (max-width: 1180px) {
+    .home-request-board-v3__top {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+        margin-bottom: 32px !important;
+    }
+
+    .home-request-board-v3__side {
+        padding-top: 0 !important;
+        max-width: 760px !important;
+    }
+
+    .home-request-board-v3__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-rows: none !important;
+        gap: 16px !important;
+    }
+
+    .home-request-board-v3__logo-mark,
+    .home-request-board-v3__card {
+        height: 186px !important;
+        min-height: 186px !important;
+        max-height: 186px !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 760px) {
+    .home-request-board-v3__top {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+        margin-bottom: 28px !important;
+    }
+
+    .home-request-board-v3__heading h2 {
+        font-size: clamp(2rem, 10vw, 3.1rem) !important;
+        line-height: 1 !important;
+    }
+
+    .home-request-board-v3__side {
+        padding-top: 0 !important;
+    }
+
+    .home-request-board-v3__side p {
+        font-size: 0.92rem !important;
+        line-height: 1.62 !important;
+    }
+
+    .home-request-board-v3__cards {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: none !important;
+        gap: 14px !important;
+        padding: 0 !important;
+    }
+
+    .home-request-board-v3__logo-mark {
+        height: 124px !important;
+        min-height: 124px !important;
+        max-height: 124px !important;
+        transform: none !important;
+    }
+
+    .home-request-board-v3__logo-mark img {
+        width: min(60%, 160px) !important;
+        max-height: 116px !important;
+    }
+
+    .home-request-board-v3__card {
+        height: 186px !important;
+        min-height: 186px !important;
+        max-height: 186px !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        transform: none !important;
+        border-radius: 20px !important;
+        padding: 20px 18px 16px !important;
+    }
+
+    .home-request-board-v3__card:hover {
+        transform: translateY(-4px) !important;
+    }
+
+    .home-request-board-v3__card>svg {
+        top: 16px !important;
+        right: 16px !important;
+        width: 34px !important;
+        height: 34px !important;
+    }
+}
+
