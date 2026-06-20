@@ -2087,3 +2087,262 @@
     margin-inline: auto;
     text-align: center;
 }
+
+
+/* =========================================================
+   Compact Contact Form Section
+   Equal height list + form
+   ========================================================= */
+
+.contact-form-section {
+    background: var(--deep-black);
+}
+
+.contact-form-section__grid--compact {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    align-items: stretch;
+    gap: clamp(22px, 4vw, 46px);
+}
+
+.contact-info-list-panel,
+.contact-form-card--compact {
+    min-height: 100%;
+}
+
+/* LEFT SIDE — no card look, list style only */
+.contact-info-list-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(26px, 3.5vw, 38px) 0;
+    color: var(--light-text);
+}
+
+.contact-info-list-panel__top {
+    max-width: 620px;
+    margin-bottom: 24px;
+}
+
+.contact-info-list-panel__top h2 {
+    max-width: 620px;
+    color: var(--light-text);
+    font-size: clamp(2rem, 3.6vw, 4.15rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    text-wrap: balance;
+}
+
+.contact-info-list {
+    display: grid;
+    gap: 0;
+    width: 100%;
+    max-width: 640px;
+    border-top: 1px solid rgba(244, 238, 220, 0.16);
+}
+
+.contact-info-list li {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 14px;
+    min-height: 52px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(244, 238, 220, 0.16);
+    color: rgba(244, 238, 220, 0.78);
+    font-size: 0.96rem;
+    font-weight: 650;
+    line-height: 1.42;
+}
+
+.contact-info-list li::after {
+    content: "";
+    position: absolute;
+    left: 38px;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-main);
+}
+
+.contact-info-list li:hover::after {
+    transform: scaleX(1);
+}
+
+.contact-info-list svg {
+    width: 24px;
+    height: 24px;
+    color: var(--gold);
+    stroke-width: 1.65;
+    transition:
+        transform var(--transition-main),
+        color var(--transition-main),
+        filter var(--transition-main);
+}
+
+.contact-info-list li:hover svg {
+    color: var(--sand);
+    transform: translateY(-2px);
+    filter: drop-shadow(0 10px 18px rgba(189, 165, 106, 0.25));
+}
+
+.contact-info-list-panel__note {
+    max-width: 600px;
+    margin-top: 22px;
+    color: rgba(244, 238, 220, 0.6);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* RIGHT SIDE — compact form, no default field style */
+.contact-form-card--compact {
+    display: flex;
+    align-items: center;
+    padding: clamp(22px, 3vw, 32px);
+    border: 1px solid rgba(244, 238, 220, 0.16);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 92% 0%, rgba(189, 165, 106, 0.12), transparent 32%),
+        rgba(244, 238, 220, 0.055);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+}
+
+.contact-form--compact {
+    width: 100%;
+}
+
+.contact-form--compact .contact-form__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.contact-form--compact .contact-form__full {
+    grid-column: 1 / -1;
+}
+
+.contact-form--compact .form-field {
+    display: grid;
+    gap: 6px;
+}
+
+.contact-form--compact .form-field label {
+    color: rgba(244, 238, 220, 0.72);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.contact-form--compact .form-field input,
+.contact-form--compact .form-field select,
+.contact-form--compact .form-field textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid rgba(244, 238, 220, 0.16);
+    border-radius: 16px;
+    outline: none;
+    appearance: none;
+    color: var(--light-text);
+    background: rgba(244, 238, 220, 0.055);
+    box-shadow: none;
+    transition:
+        border-color var(--transition-main),
+        background var(--transition-main),
+        box-shadow var(--transition-main);
+}
+
+.contact-form--compact .form-field textarea {
+    min-height: 104px;
+    max-height: 126px;
+    resize: vertical;
+}
+
+.contact-form--compact .form-field input::placeholder,
+.contact-form--compact .form-field textarea::placeholder {
+    color: rgba(244, 238, 220, 0.42);
+}
+
+.contact-form--compact .form-field select {
+    cursor: pointer;
+}
+
+.contact-form--compact .form-field input:focus,
+.contact-form--compact .form-field select:focus,
+.contact-form--compact .form-field textarea:focus {
+    border-color: rgba(189, 165, 106, 0.75);
+    background: rgba(244, 238, 220, 0.085);
+    box-shadow: 0 0 0 4px rgba(189, 165, 106, 0.13);
+}
+
+.contact-form--compact .contact-form__note {
+    margin-top: 12px;
+    color: rgba(244, 238, 220, 0.56);
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.contact-form--compact .form-message {
+    margin-top: 10px;
+    min-height: 18px;
+    font-size: 0.82rem;
+}
+
+.contact-form--compact .btn {
+    width: 100%;
+    margin-top: 14px;
+    min-height: 50px;
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+    .contact-form-section__grid--compact {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .contact-info-list-panel {
+        padding: 0;
+    }
+
+    .contact-info-list-panel__top,
+    .contact-info-list,
+    .contact-info-list-panel__note {
+        max-width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .contact-form-card--compact {
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .contact-form--compact .contact-form__grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .contact-form--compact .form-field input,
+    .contact-form--compact .form-field select,
+    .contact-form--compact .form-field textarea {
+        min-height: 46px;
+        border-radius: 14px;
+    }
+
+    .contact-form--compact .form-field textarea {
+        min-height: 98px;
+    }
+
+    .contact-info-list li {
+        min-height: 50px;
+        font-size: 0.92rem;
+    }
+}

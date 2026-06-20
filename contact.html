@@ -79,7 +79,7 @@
                         </p>
 
                         <h2 id="request-details-title">
-                            Tell Us What Kind Of Concrete Project You Are Planning
+                            The request details section
                         </h2>
 
                         <p>
@@ -95,111 +95,108 @@
             </div>
         </section>
 
-        <!-- =========================================================
-             Section 3 — Compact Contact Form Section
-             ========================================================= -->
-        <section class="contact-form-section section" id="contact-form" aria-labelledby="contact-form-title">
-            <div class="container">
-                <div class="contact-form-section__grid">
-                    <aside class="contact-info-card shine-surface" data-aos="fade-right">
-                        <div class="contact-info-card__content">
-                            <p class="section-kicker section-kicker--light">
-                                START A REQUEST
-                            </p>
+<!-- =========================================================
+     Section 3 — Compact Contact Form Section
+     ========================================================= -->
+<section class="contact-form-section section" id="contact-form" aria-labelledby="contact-form-title">
+    <div class="container">
+        <div class="contact-form-section__grid contact-form-section__grid--compact">
+            <aside class="contact-info-list-panel" data-aos="fade-right">
+                <div class="contact-info-list-panel__top">
+                    <p class="section-kicker section-kicker--light">
+                        START A REQUEST
+                    </p>
 
-                            <h2 id="contact-form-title">
-                                One Clear Form For Concrete Project Details
-                            </h2>
+                    <h2 id="contact-form-title">
+                        One Clear Form For Concrete Project Details
+                    </h2>
+                </div>
 
-                            <p>
-                                SlabWay helps users organize concrete project information before reviewing local
-                                provider options. Share the basics and choose the service category that best fits
-                                your request.
-                            </p>
+                <ul class="contact-info-list">
+                    <li>
+                        <i data-lucide="check-circle" aria-hidden="true"></i>
+                        <span>Independent provider-matching platform</span>
+                    </li>
 
-                            <div class="contact-info-card__rows">
-                                <div class="contact-info-row">
-                                    <i data-lucide="check-circle" aria-hidden="true"></i>
-                                    <span>Independent provider-matching platform</span>
-                                </div>
+                    <li>
+                        <i data-lucide="layers" aria-hidden="true"></i>
+                        <span>Concrete categories organized in one place</span>
+                    </li>
 
-                                <div class="contact-info-row">
-                                    <i data-lucide="list-checks" aria-hidden="true"></i>
-                                    <span>Concrete categories organized in one place</span>
-                                </div>
+                    <li>
+                        <i data-lucide="git-compare" aria-hidden="true"></i>
+                        <span>Compare possible local provider options</span>
+                    </li>
 
-                                <div class="contact-info-row">
-                                    <i data-lucide="send" aria-hidden="true"></i>
-                                    <span>Request path for local option comparison</span>
-                                </div>
+                    <li>
+                        <i data-lucide="send" aria-hidden="true"></i>
+                        <span>One simple request path for project details</span>
+                    </li>
 
-                                <div class="contact-info-row">
-                                    <i data-lucide="shield-check" aria-hidden="true"></i>
-                                    <span>No direct contractor claims or pressure</span>
-                                </div>
-                            </div>
+                    <li>
+                        <i data-lucide="shield-check" aria-hidden="true"></i>
+                        <span>SlabWay does not perform concrete work directly</span>
+                    </li>
+                </ul>
+
+                <p class="contact-info-list-panel__note">
+                    SlabWay helps organize concrete request details before users review local provider options.
+                </p>
+            </aside>
+
+            <div class="contact-form-card contact-form-card--compact" data-aos="fade-left">
+                <form class="contact-form contact-form--compact" action="contact.php" method="post" data-contact-form>
+                    <input type="hidden" name="sourcePage" value="SlabWay contact page concrete request form">
+
+                    <div class="contact-form__grid">
+                        <div class="form-field">
+                            <label for="fullName">Full name</label>
+                            <input id="fullName" type="text" name="fullName" placeholder="Your name" autocomplete="name"
+                                required>
                         </div>
 
-                        <p class="contact-info-card__note">
-                            SlabWay is an independent concrete service matching platform. SlabWay does not directly
-                            pour, install, repair, inspect, guarantee, or perform concrete work.
-                        </p>
-                    </aside>
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" placeholder="you@example.com"
+                                autocomplete="email" required>
+                        </div>
 
-                    <div class="contact-form-card" data-aos="fade-left">
-                        <form class="contact-form" action="contact.php" method="post" data-contact-form>
-                            <input type="hidden" name="sourcePage" value="SlabWay contact page concrete request form">
+                        <div class="form-field">
+                            <label for="phone">Phone</label>
+                            <input id="phone" type="tel" name="phone" placeholder="Phone number" autocomplete="tel"
+                                required>
+                        </div>
 
-                            <div class="contact-form__grid">
-                                <div class="form-field">
-                                    <label for="fullName">Full name</label>
-                                    <input id="fullName" type="text" name="fullName" placeholder="Your name"
-                                        autocomplete="name" required>
-                                </div>
+                        <div class="form-field">
+                            <label for="service">Service category</label>
+                            <select id="service" name="service" data-service-select required>
+                                <option value="">Choose a concrete category</option>
+                            </select>
+                        </div>
 
-                                <div class="form-field">
-                                    <label for="email">Email</label>
-                                    <input id="email" type="email" name="email" placeholder="you@example.com"
-                                        autocomplete="email" required>
-                                </div>
-
-                                <div class="form-field">
-                                    <label for="phone">Phone</label>
-                                    <input id="phone" type="tel" name="phone" placeholder="Phone number"
-                                        autocomplete="tel" required>
-                                </div>
-
-                                <div class="form-field">
-                                    <label for="service">Service category</label>
-                                    <select id="service" name="service" data-service-select required>
-                                        <option value="">Choose a concrete category</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-field contact-form__full">
-                                    <label for="message">Project details</label>
-                                    <textarea id="message" name="message"
-                                        placeholder="Tell us about the surface, size, current condition, timing, or finish preferences."
-                                        required></textarea>
-                                </div>
-                            </div>
-
-                            <p class="contact-form__note">
-                                By submitting, you share your project details so SlabWay can help organize your request
-                                path. SlabWay is not a direct concrete contractor.
-                            </p>
-
-                            <div class="form-message" data-form-message role="status" aria-live="polite"></div>
-
-                            <button class="btn btn--primary" type="submit">
-                                <i data-lucide="send" aria-hidden="true"></i>
-                                <span data-submit-text>Submit Concrete Request</span>
-                            </button>
-                        </form>
+                        <div class="form-field contact-form__full">
+                            <label for="message">Project details</label>
+                            <textarea id="message" name="message"
+                                placeholder="Surface, size, condition, timing, or finish preferences."
+                                required></textarea>
+                        </div>
                     </div>
-                </div>
+
+                    <p class="contact-form__note">
+                        SlabWay is an independent concrete service matching platform, not a direct concrete contractor.
+                    </p>
+
+                    <div class="form-message" data-form-message role="status" aria-live="polite"></div>
+
+                    <button class="btn btn--primary" type="submit">
+                        <i data-lucide="send" aria-hidden="true"></i>
+                        <span data-submit-text>Submit Concrete Request</span>
+                    </button>
+                </form>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- =========================================================
              Section 4 — Photo Left + Text Right
