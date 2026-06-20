@@ -1726,3 +1726,169 @@ iframe {
         padding-top: 34px !important;
     }
 }
+
+/* =========================================================
+   FINAL FIX — Legal pages container overflow
+   Privacy / Terms / Cookies
+   Put at the VERY bottom of responsive.css
+   ========================================================= */
+
+.legal-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.legal-page main,
+.legal-page section,
+.legal-page .container,
+.legal-page .legal-hero,
+.legal-page .legal-content,
+.legal-page .legal-disclaimer-strip,
+.legal-page .global-cta {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.legal-page .container {
+    width: min(var(--container), calc(100% - 40px));
+    max-width: calc(100% - 40px);
+    margin-inline: auto;
+}
+
+.legal-content__grid,
+.legal-sidebar,
+.legal-article,
+.legal-notice,
+.legal-block,
+.legal-sidebar__card,
+.legal-mini-grid,
+.config-contact-card,
+.legal-contact-card {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.legal-content__grid {
+    grid-template-columns: minmax(0, 0.34fr) minmax(0, 0.66fr);
+}
+
+.legal-article {
+    width: 100%;
+    overflow: hidden;
+}
+
+.legal-sidebar__card,
+.legal-notice,
+.legal-block,
+.legal-mini-card,
+.config-contact-card {
+    overflow: hidden;
+}
+
+.legal-block p,
+.legal-block li,
+.legal-notice p,
+.legal-sidebar__text,
+.legal-contact-card a,
+.legal-contact-card span,
+.config-contact-card a,
+.config-contact-card span,
+.legal-hero p,
+.legal-disclaimer-strip p {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+/* tables should scroll inside their own wrapper, not push the page */
+.legal-table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Tablet */
+@media (max-width: 1080px) {
+    .legal-content__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .legal-sidebar {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+    .legal-page .container {
+        width: calc(100% - 28px);
+        max-width: calc(100% - 28px);
+    }
+
+    .legal-content {
+        padding: 58px 0;
+    }
+
+    .legal-content__grid {
+        gap: 22px;
+    }
+
+    .legal-sidebar {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .legal-sidebar__card,
+    .legal-notice,
+    .legal-block {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .legal-mini-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .legal-hero__meta {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .legal-hero__pill {
+        width: 100%;
+        max-width: 100%;
+        justify-content: flex-start;
+        overflow-wrap: anywhere;
+    }
+
+    .legal-disclaimer-strip__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .legal-table {
+        min-width: 520px;
+    }
+}
+
+/* Extra small */
+@media (max-width: 420px) {
+    .legal-page .container {
+        width: calc(100% - 24px);
+        max-width: calc(100% - 24px);
+    }
+
+    .legal-sidebar__card,
+    .legal-notice,
+    .legal-block {
+        padding: 18px;
+    }
+
+    .legal-table {
+        min-width: 480px;
+    }
+}
