@@ -2095,7 +2095,7 @@
     transform: scale(1.045) !important;
 }
 
-/* tablet/mobile */
+
 @media (max-width: 760px) {
     .home-project-snapshot__top h2 span {
         display: inline !important;
@@ -2109,7 +2109,7 @@
     }
 }
 
-/* убрать нижний padding у home-intro-cards */
+
 .home-intro-cards {
     padding-bottom: 0 !important;
 }
@@ -2117,5 +2117,242 @@
 @media (max-width: 760px) {
     .home-intro-cards {
         padding-bottom: 0 !important;
+    }
+}
+
+/* =========================================================
+   FINAL GOOD RESPONSIVE — Request Board V3
+   Tablet/mobile clean premium list, no logos
+   ========================================================= */
+
+/* tablet + mobile common */
+@media (max-width: 1180px) {
+    .home-request-board-v3 {
+        padding-top: 64px !important;
+        padding-bottom: 68px !important;
+    }
+
+    .home-request-board-v3__top {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+        margin-bottom: 28px !important;
+        text-align: left !important;
+    }
+
+    .home-request-board-v3__heading {
+        max-width: 860px !important;
+        margin: 0 !important;
+    }
+
+    .home-request-board-v3__heading .section-kicker {
+        justify-content: flex-start !important;
+    }
+
+    .home-request-board-v3__heading h2 {
+        max-width: 860px !important;
+        margin: 0 !important;
+        font-size: clamp(2.15rem, 6vw, 4.2rem) !important;
+        line-height: 1 !important;
+        letter-spacing: -0.058em !important;
+        text-align: left !important;
+    }
+
+    .home-request-board-v3__side {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto !important;
+        align-items: center !important;
+        gap: 20px !important;
+        max-width: 100% !important;
+        padding-top: 0 !important;
+        text-align: left !important;
+    }
+
+    .home-request-board-v3__side p {
+        order: 1 !important;
+        max-width: 680px !important;
+        margin: 0 !important;
+        font-size: 0.95rem !important;
+        line-height: 1.62 !important;
+    }
+
+    .home-request-board-v3__side .btn {
+        order: 2 !important;
+        white-space: nowrap !important;
+    }
+
+    /* убираем оба логотипа на адаптиве */
+    .home-request-board-v3__logo-mark {
+        display: none !important;
+    }
+
+    .home-request-board-v3__cards {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-rows: none !important;
+        gap: 14px !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    .home-request-board-v3__cards>* {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: auto !important;
+        transform: none !important;
+    }
+
+    .home-request-board-v3__card {
+        position: relative !important;
+        height: auto !important;
+        min-height: 168px !important;
+        max-height: none !important;
+        display: grid !important;
+        grid-template-rows: auto auto auto !important;
+        align-content: end !important;
+        gap: 9px !important;
+        padding: 22px 20px 18px !important;
+        border-radius: 22px !important;
+        overflow: hidden !important;
+        transform: none !important;
+    }
+
+    .home-request-board-v3__card:hover {
+        transform: translateY(-5px) !important;
+    }
+
+    .home-request-board-v3__card>svg {
+        top: 18px !important;
+        right: 18px !important;
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .home-request-board-v3__eyebrow {
+        height: auto !important;
+        margin: 0 54px 4px 0 !important;
+        display: block !important;
+        font-size: 0.64rem !important;
+        line-height: 1 !important;
+    }
+
+    .home-request-board-v3__card h3 {
+        min-height: 0 !important;
+        max-height: none !important;
+        margin: 0 54px 0 0 !important;
+        display: block !important;
+        max-width: 280px !important;
+        font-size: 1.16rem !important;
+        line-height: 1.05 !important;
+    }
+
+    .home-request-board-v3__card p:not(.home-request-board-v3__eyebrow) {
+        min-height: 0 !important;
+        max-height: none !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        font-size: 0.84rem !important;
+        line-height: 1.46 !important;
+
+        display: block !important;
+        -webkit-line-clamp: unset !important;
+        -webkit-box-orient: unset !important;
+        overflow: visible !important;
+    }
+
+    /* первая карточка на адаптиве темная — вместо логотипа дает контраст */
+    .home-request-board-v3__card:nth-of-type(1) {
+        color: var(--light-text) !important;
+        border-color: rgba(217, 201, 162, 0.22) !important;
+        background:
+            radial-gradient(circle at 90% 12%, rgba(189, 165, 106, 0.22), transparent 34%),
+            var(--deep-black) !important;
+        box-shadow: 0 24px 58px rgba(0, 0, 0, 0.18) !important;
+    }
+
+    .home-request-board-v3__card:nth-of-type(1) h3 {
+        color: var(--light-text) !important;
+    }
+
+    .home-request-board-v3__card:nth-of-type(1) .home-request-board-v3__eyebrow,
+    .home-request-board-v3__card:nth-of-type(1)>svg {
+        color: var(--sand) !important;
+    }
+
+    .home-request-board-v3__card:nth-of-type(1) p:not(.home-request-board-v3__eyebrow) {
+        color: rgba(244, 238, 220, 0.72) !important;
+    }
+}
+
+/* mobile only */
+@media (max-width: 760px) {
+    .home-request-board-v3 {
+        padding-top: 52px !important;
+        padding-bottom: 56px !important;
+    }
+
+    .home-request-board-v3__top {
+        gap: 18px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .home-request-board-v3__heading h2 {
+        font-size: clamp(2rem, 10vw, 3.08rem) !important;
+        line-height: 1 !important;
+    }
+
+    .home-request-board-v3__side {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .home-request-board-v3__side p {
+        max-width: 100% !important;
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .home-request-board-v3__side .btn {
+        width: fit-content !important;
+    }
+
+    .home-request-board-v3__cards {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .home-request-board-v3__card {
+        min-height: 146px !important;
+        padding: 20px 18px 17px !important;
+        border-radius: 20px !important;
+    }
+
+    .home-request-board-v3__card>svg {
+        top: 17px !important;
+        right: 17px !important;
+        width: 33px !important;
+        height: 33px !important;
+    }
+
+    .home-request-board-v3__eyebrow {
+        margin-right: 50px !important;
+        font-size: 0.62rem !important;
+    }
+
+    .home-request-board-v3__card h3 {
+        margin-right: 50px !important;
+        font-size: 1.13rem !important;
+    }
+
+    .home-request-board-v3__card p:not(.home-request-board-v3__eyebrow) {
+        font-size: 0.82rem !important;
+        line-height: 1.44 !important;
+    }
+}
+
+/* Hide request board only on tablets */
+@media (min-width: 761px) and (max-width: 1180px) {
+    .home-request-board-v3 {
+        display: none !important;
     }
 }
